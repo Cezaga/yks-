@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { DepartmentIndexEntry } from '../types'
 import { cityKey } from '../lib/normalize'
+import { PACKAGES, type DepartmentPackage } from '../data/packages'
 import './DepartmentPicker.css'
 
 interface DepartmentPickerProps {
@@ -8,9 +9,10 @@ interface DepartmentPickerProps {
   selected: DepartmentIndexEntry[]
   onAdd: (dept: DepartmentIndexEntry) => void
   onRemove: (slug: string) => void
+  onAddPackage: (pkg: DepartmentPackage) => void
 }
 
-export default function DepartmentPicker({ index, selected, onAdd, onRemove }: DepartmentPickerProps) {
+export default function DepartmentPicker({ index, selected, onAdd, onRemove, onAddPackage }: DepartmentPickerProps) {
   const [query, setQuery] = useState('')
   const selectedSlugs = useMemo(() => new Set(selected.map(d => d.slug)), [selected])
 
@@ -23,8 +25,30 @@ export default function DepartmentPicker({ index, selected, onAdd, onRemove }: D
       .slice(0, 30)
   }, [query, index, selectedSlugs])
 
+  // Packages surface when the search matches their name (or "paket"/"yusuf").
+  const matchedPackages = useMemo(() => {
+    const q = cityKey(query.trim())
+    if (!q) return []
+    return PACKAGES.filter(p => cityKey(p.name).includes(q) || 'paket'.includes(q))
+  }, [query])
+
   return (
     <div className="department-picker">
+      <div className="department-picker-packages">
+        {PACKAGES.map(p => (
+          <button
+            key={p.id}
+            type="button"
+            className="department-picker-package-btn"
+            onClick={() => onAddPackage(p)}
+            title={`${p.slugs.length} bölümü birden ekler`}
+          >
+            ★ {p.name}
+            <span className="department-picker-tag">{p.slugs.length} bölüm</span>
+          </button>
+        ))}
+      </div>
+
       <input
         type="text"
         value={query}
@@ -32,8 +56,23 @@ export default function DepartmentPicker({ index, selected, onAdd, onRemove }: D
         placeholder="Bölüm ara (ör. Bilgisayar Mühendisliği)..."
         className="department-picker-input"
       />
-      {suggestions.length > 0 && (
+      {(matchedPackages.length > 0 || suggestions.length > 0) && (
         <ul className="department-picker-suggestions">
+          {matchedPackages.map(p => (
+            <li key={`pkg-${p.id}`}>
+              <button
+                type="button"
+                className="is-package"
+                onClick={() => {
+                  onAddPackage(p)
+                  setQuery('')
+                }}
+              >
+                ★ {p.name}
+                <span className="department-picker-tag">{p.slugs.length} bölüm ekle</span>
+              </button>
+            </li>
+          ))}
           {suggestions.map(d => (
             <li key={d.slug}>
               <button

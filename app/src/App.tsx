@@ -59,6 +59,15 @@ function App() {
     setSelectedDepts(prev => prev.filter(d => d.slug !== slug))
   }
 
+  const addPackage = (pkg: { slugs: string[] }) => {
+    const bySlug = new Map(index.map(d => [d.slug, d]))
+    const toAdd = pkg.slugs.map(s => bySlug.get(s)).filter((d): d is DepartmentIndexEntry => Boolean(d))
+    setSelectedDepts(prev => {
+      const have = new Set(prev.map(d => d.slug))
+      return [...prev, ...toAdd.filter(d => !have.has(d.slug))]
+    })
+  }
+
   const handleConfirm = async () => {
     if (selectedPlates.size === 0 || selectedDepts.length === 0) return
     setLoading(true)
@@ -109,7 +118,13 @@ function App() {
 
         <section className="app-panel">
           <h2>Bölümler</h2>
-          <DepartmentPicker index={index} selected={selectedDepts} onAdd={addDept} onRemove={removeDept} />
+          <DepartmentPicker
+            index={index}
+            selected={selectedDepts}
+            onAdd={addDept}
+            onRemove={removeDept}
+            onAddPackage={addPackage}
+          />
         </section>
       </main>
 

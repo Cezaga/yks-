@@ -5,6 +5,35 @@
   gap: 12px;
 }
 
+.department-picker-packages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.department-picker-package-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--map-fill-selected, #3b82f6);
+  background: color-mix(in srgb, var(--map-fill-selected, #3b82f6) 16%, transparent);
+  color: var(--text, #f2f2f2);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.department-picker-package-btn:hover {
+  background: color-mix(in srgb, var(--map-fill-selected, #3b82f6) 28%, transparent);
+}
+
+.department-picker-suggestions li button.is-package {
+  color: var(--map-fill-selected, #3b82f6);
+  font-weight: 600;
+}
+
 .department-picker-input {
   width: 100%;
   padding: 10px 12px;

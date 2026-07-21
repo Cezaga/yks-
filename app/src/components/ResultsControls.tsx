@@ -1,13 +1,22 @@
-import { FUNDING_OPTIONS, type Funding } from '../lib/classify'
+import {
+  FUNDING_OPTIONS,
+  LANGUAGE_OPTIONS,
+  type Funding,
+  type Language,
+  type Nationality
+} from '../lib/classify'
 import './ResultsControls.css'
 
 export type GroupMode = 'genel' | 'sehir'
 export type SortDir = 'asc' | 'desc'
+export type NationalityFilter = 'hepsi' | Nationality
 
 export interface ResultsOptions {
   groupMode: GroupMode
   sortDir: SortDir
   funding: Funding[]
+  nationality: NationalityFilter
+  languages: Language[]
 }
 
 interface ResultsControlsProps {
@@ -18,9 +27,13 @@ interface ResultsControlsProps {
 export default function ResultsControls({ options, onChange }: ResultsControlsProps) {
   const toggleFunding = (f: Funding) => {
     const set = new Set(options.funding)
-    if (set.has(f)) set.delete(f)
-    else set.add(f)
+    set.has(f) ? set.delete(f) : set.add(f)
     onChange({ funding: [...set] })
+  }
+  const toggleLanguage = (l: Language) => {
+    const set = new Set(options.languages)
+    set.has(l) ? set.delete(l) : set.add(l)
+    onChange({ languages: [...set] })
   }
 
   return (
@@ -66,6 +79,22 @@ export default function ResultsControls({ options, onChange }: ResultsControlsPr
       </div>
 
       <div className="rc-group">
+        <span className="rc-label">Uyruk</span>
+        <div className="rc-segment">
+          {(['hepsi', 'TC', 'KKTC'] as NationalityFilter[]).map(n => (
+            <button
+              key={n}
+              type="button"
+              className={options.nationality === n ? 'is-active' : ''}
+              onClick={() => onChange({ nationality: n })}
+            >
+              {n === 'hepsi' ? 'Hepsi' : n === 'TC' ? 'T.C. Uyruklu' : 'KKTC Uyruklu'}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="rc-group">
         <span className="rc-label">Ücret türü</span>
         <div className="rc-chips">
           {FUNDING_OPTIONS.map(f => (
@@ -80,6 +109,27 @@ export default function ResultsControls({ options, onChange }: ResultsControlsPr
           ))}
           {options.funding.length > 0 && (
             <button type="button" className="rc-clear" onClick={() => onChange({ funding: [] })}>
+              tümü
+            </button>
+          )}
+        </div>
+      </div>
+
+      <div className="rc-group">
+        <span className="rc-label">Öğretim dili</span>
+        <div className="rc-chips">
+          {LANGUAGE_OPTIONS.map(l => (
+            <button
+              key={l}
+              type="button"
+              className={`rc-chip${options.languages.includes(l) ? ' is-active' : ''}`}
+              onClick={() => toggleLanguage(l)}
+            >
+              {l}
+            </button>
+          ))}
+          {options.languages.length > 0 && (
+            <button type="button" className="rc-clear" onClick={() => onChange({ languages: [] })}>
               tümü
             </button>
           )}

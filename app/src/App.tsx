@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import TurkeyMap from './components/TurkeyMap'
+import CitySearch from './components/CitySearch'
 import DepartmentPicker from './components/DepartmentPicker'
 import ResultsTable from './components/ResultsTable'
 import ResultsControls, { type ResultsOptions } from './components/ResultsControls'
@@ -24,7 +25,9 @@ function App() {
   const [options, setOptions] = useState<ResultsOptions>({
     groupMode: 'genel',
     sortDir: 'asc',
-    funding: []
+    funding: [],
+    nationality: 'hepsi',
+    languages: []
   })
   const patchOptions = (patch: Partial<ResultsOptions>) => setOptions(prev => ({ ...prev, ...patch }))
 
@@ -86,6 +89,7 @@ function App() {
       <main className="app-main">
         <section className="app-panel">
           <h2>İller</h2>
+          <CitySearch selectedPlates={selectedPlates} onToggle={togglePlate} />
           <TurkeyMap selected={selectedPlates} onToggle={togglePlate} />
           <div className="selected-cities">
             {selectedCityNames.length === 0 && (

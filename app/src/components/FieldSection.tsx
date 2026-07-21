@@ -14,6 +14,8 @@ export interface ProgramRow {
   program: string
   scoreType: string
   funding: string
+  nationality: string
+  language: string
   byYear: Map<number, YearEntry>
   baseRank: number | null
 }
@@ -61,6 +63,9 @@ function HeadCols() {
       <th>Üniversite</th>
       <th>Bölüm</th>
       <th>Ücret</th>
+      <th>Dil</th>
+      <th>{BASE_YEAR} Kont.</th>
+      <th>{BASE_YEAR} Yerleşen</th>
       <th>{BASE_YEAR} Sıra</th>
       <th>{BASE_YEAR} Puan</th>
       {PAST_YEARS.map(y => (
@@ -81,6 +86,9 @@ function RowCells({ row }: { row: ProgramRow }) {
       </td>
       <td>{row.program}</td>
       <td>{row.funding}</td>
+      <td>{row.language}</td>
+      <td>{base?.quota ?? '—'}</td>
+      <td>{base?.placed ?? '—'}</td>
       <td className="rt-primary">{base?.rank ?? '—'}</td>
       <td>{base?.score ?? '—'}</td>
       {PAST_YEARS.map(y => (

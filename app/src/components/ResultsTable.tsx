@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { DepartmentData } from '../types'
 import { cityKey } from '../lib/normalize'
-import { deriveFunding, SCORE_FIELDS } from '../lib/classify'
+import { deriveFunding, deriveNationality, deriveLanguage, SCORE_FIELDS } from '../lib/classify'
 import type { ResultsOptions } from './ResultsControls'
 import FieldSection, { BASE_YEAR, type ProgramRow, type RankRange } from './FieldSection'
 import './ResultsTable.css'
@@ -34,6 +34,8 @@ function buildRows(departments: DepartmentData[], cityKeys: Set<string>): Progra
         program: row.program,
         scoreType: (row.scoreType || '').toUpperCase(),
         funding: deriveFunding(row.sector, row.programRaw),
+        nationality: deriveNationality(row.programRaw),
+        language: deriveLanguage(row.programRaw),
         byYear,
         baseRank: base?.rankNumeric ?? null
       })
@@ -51,27 +53,32 @@ export default function ResultsTable({ departments, selectedCityNames, options }
 
   const allRows = useMemo(() => buildRows(departments, cityKeys), [departments, cityKeys])
 
-  const fundingFiltered = useMemo(() => {
-    if (options.funding.length === 0) return allRows
-    const set = new Set(options.funding)
-    return allRows.filter(r => set.has(r.funding as never))
-  }, [allRows, options.funding])
+  const filtered = useMemo(() => {
+    const fundingSet = new Set(options.funding)
+    const langSet = new Set(options.languages)
+    return allRows.filter(r => {
+      if (fundingSet.size > 0 && !fundingSet.has(r.funding as never)) return false
+      if (options.nationality !== 'hepsi' && r.nationality !== options.nationality) return false
+      if (langSet.size > 0 && !langSet.has(r.language as never)) return false
+      return true
+    })
+  }, [allRows, options.funding, options.nationality, options.languages])
 
   // Group by score-type field so SAY / EA / SÖZ / DİL / TYT never mix in one list.
   const byField = useMemo(() => {
     const map = new Map<string, ProgramRow[]>()
-    for (const r of fundingFiltered) {
+    for (const r of filtered) {
       const arr = map.get(r.scoreType) ?? []
       arr.push(r)
       map.set(r.scoreType, arr)
     }
     return map
-  }, [fundingFiltered])
+  }, [filtered])
 
   if (departments.length === 0) {
     return <p className="results-hint">Sonuçları görmek için sol taraftan il, sağ taraftan bölüm seçip "Onayla"ya basın.</p>
   }
-  if (fundingFiltered.length === 0) {
+  if (filtered.length === 0) {
     return <p className="results-hint">Seçilen kriterlere uyan sonuç bulunamadı.</p>
   }
 

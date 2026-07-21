@@ -1,0 +1,39 @@
+.turkey-map-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.turkey-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.turkey-map-path {
+  fill: var(--map-fill, #2a2f3a);
+  stroke: var(--map-stroke, #12151b);
+  stroke-width: 0.6;
+  cursor: pointer;
+  transition: fill 0.12s ease;
+}
+
+.turkey-map-path:hover {
+  fill: var(--map-fill-hover, #4a5568);
+}
+
+.turkey-map-path.is-selected {
+  fill: var(--map-fill-selected, #3b82f6);
+}
+
+.turkey-map-tooltip {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--panel-bg, #1a1d24);
+  color: var(--text, #f2f2f2);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+  border: 1px solid var(--border, #333);
+}

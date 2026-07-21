@@ -8,9 +8,9 @@
   --map-fill-selected: #3b82f6;
   --text: #f2f2f2;
 
-  max-width: 1180px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 24px 20px 60px;
+  padding: 24px 24px 60px;
   color: var(--text);
 }
 
@@ -52,15 +52,27 @@
 
 .app-main {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .app-main {
     grid-template-columns: 1fr;
   }
+}
+
+/* Keep the map a comfortable size and centred so the İller panel doesn't
+   stretch overly tall on wide screens. */
+.turkey-map-wrapper {
+  max-width: 680px;
+  margin: 8px auto 0;
+}
+
+.app-panel {
+  display: flex;
+  flex-direction: column;
 }
 
 .app-panel {

@@ -1,7 +1,12 @@
 import { useMemo, useState } from 'react'
 import type { DepartmentIndexEntry } from '../types'
 import { cityKey } from '../lib/normalize'
-import { PACKAGES, type DepartmentPackage } from '../data/packages'
+import {
+  PACKAGES,
+  PACKAGE_CATEGORY_LABELS,
+  type DepartmentPackage,
+  type PackageCategory
+} from '../data/packages'
 import './DepartmentPicker.css'
 
 interface DepartmentPickerProps {
@@ -35,18 +40,29 @@ export default function DepartmentPicker({ index, selected, onAdd, onRemove, onA
   return (
     <div className="department-picker">
       <div className="department-picker-packages">
-        {PACKAGES.map(p => (
-          <button
-            key={p.id}
-            type="button"
-            className="department-picker-package-btn"
-            onClick={() => onAddPackage(p)}
-            title={`${p.slugs.length} bölümü birden ekler`}
-          >
-            ★ {p.name}
-            <span className="department-picker-tag">{p.slugs.length} bölüm</span>
-          </button>
-        ))}
+        {(['ozel', 'ayt', 'tyt'] as PackageCategory[]).map(cat => {
+          const list = PACKAGES.filter(p => p.category === cat)
+          if (list.length === 0) return null
+          return (
+            <div key={cat} className="department-picker-package-group">
+              <span className="department-picker-package-heading">{PACKAGE_CATEGORY_LABELS[cat]}</span>
+              <div className="department-picker-package-row">
+                {list.map(p => (
+                  <button
+                    key={p.id}
+                    type="button"
+                    className={`department-picker-package-btn is-${cat}`}
+                    onClick={() => onAddPackage(p)}
+                    title={`${p.slugs.length} bölümü birden ekler`}
+                  >
+                    ★ {p.name}
+                    <span className="department-picker-tag">{p.slugs.length}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )
+        })}
       </div>
 
       <input

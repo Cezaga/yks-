@@ -7,6 +7,26 @@
 
 .department-picker-packages {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.department-picker-package-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.department-picker-package-heading {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.55;
+  font-weight: 600;
+}
+
+.department-picker-package-row {
+  display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -27,6 +47,29 @@
 
 .department-picker-package-btn:hover {
   background: color-mix(in srgb, var(--map-fill-selected, #3b82f6) 28%, transparent);
+}
+
+.department-picker-package-btn.is-ozel {
+  border-color: #d9a441;
+  background: color-mix(in srgb, #d9a441 16%, transparent);
+}
+.department-picker-package-btn.is-ozel:hover {
+  background: color-mix(in srgb, #d9a441 28%, transparent);
+}
+
+.department-picker-package-btn.is-tyt {
+  border-color: #2fb59a;
+  background: color-mix(in srgb, #2fb59a 16%, transparent);
+}
+.department-picker-package-btn.is-tyt:hover {
+  background: color-mix(in srgb, #2fb59a 28%, transparent);
+}
+
+.department-picker-package-btn .department-picker-tag {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 1px 8px;
+  opacity: 0.85;
 }
 
 .department-picker-suggestions li button.is-package {

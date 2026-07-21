@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   font: 15px/1.5 var(--sans);

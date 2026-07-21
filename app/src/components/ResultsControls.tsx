@@ -21,19 +21,25 @@ export interface ResultsOptions {
 
 interface ResultsControlsProps {
   options: ResultsOptions
-  onChange: (patch: Partial<ResultsOptions>) => void
+  onChange: (patch: Partial<ResultsOptions> | ((prev: ResultsOptions) => Partial<ResultsOptions>)) => void
 }
 
 export default function ResultsControls({ options, onChange }: ResultsControlsProps) {
+  // Functional updates so two quick chip clicks don't clobber each other via a
+  // stale `options` closure (each click reads the freshest selection).
   const toggleFunding = (f: Funding) => {
-    const set = new Set(options.funding)
-    set.has(f) ? set.delete(f) : set.add(f)
-    onChange({ funding: [...set] })
+    onChange(prev => {
+      const set = new Set(prev.funding)
+      set.has(f) ? set.delete(f) : set.add(f)
+      return { funding: [...set] }
+    })
   }
   const toggleLanguage = (l: Language) => {
-    const set = new Set(options.languages)
-    set.has(l) ? set.delete(l) : set.add(l)
-    onChange({ languages: [...set] })
+    onChange(prev => {
+      const set = new Set(prev.languages)
+      set.has(l) ? set.delete(l) : set.add(l)
+      return { languages: [...set] }
+    })
   }
 
   return (

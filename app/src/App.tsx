@@ -29,7 +29,8 @@ function App() {
     nationality: 'hepsi',
     languages: []
   })
-  const patchOptions = (patch: Partial<ResultsOptions>) => setOptions(prev => ({ ...prev, ...patch }))
+  const patchOptions = (patch: Partial<ResultsOptions> | ((prev: ResultsOptions) => Partial<ResultsOptions>)) =>
+    setOptions(prev => ({ ...prev, ...(typeof patch === 'function' ? patch(prev) : patch) }))
 
   useEffect(() => {
     loadIndex()

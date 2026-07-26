@@ -85,42 +85,98 @@ function readPayload(p: unknown): Tercih[] {
     .filter(t => t.university && t.programRaw)
 }
 
-/** Tercih listesini paylaşılabilir tam adrese çevirir (async — sıkıştırma). */
-export async function buildShareUrl(tercihler: Tercih[]): Promise<string> {
+/** Yükü sıkıştırılmış base64 metne çevirir (URL değil). */
+async function encodePayload(tercihler: Tercih[]): Promise<{ data: string; compressed: boolean }> {
   const json = JSON.stringify(buildPayload(tercihler))
-  const { origin, pathname } = window.location
   if (hasCompression) {
     try {
-      const enc = base64UrlEncode(await gzip(json))
-      return `${origin}${pathname}#tz=${enc}`
+      return { data: base64UrlEncode(await gzip(json)), compressed: true }
     } catch {
-      /* sıkıştırma başarısızsa düz yola düş */
+      /* düz yola düş */
     }
   }
-  return `${origin}${pathname}#tj=${base64UrlEncode(new TextEncoder().encode(json))}`
+  return { data: base64UrlEncode(new TextEncoder().encode(json)), compressed: false }
+}
+
+/** Kendi kendine yeten (uzun ama her koşulda çalışan) bağlantı. */
+function selfContainedUrl(data: string, compressed: boolean): string {
+  const { origin, pathname } = window.location
+  return `${origin}${pathname}#${compressed ? 'tz' : 'tj'}=${data}`
+}
+
+/**
+ * Kısa paylaşım bağlantısı üretir.
+ *   1) Veriyi /api/s'e kaydetmeyi dener -> `.../#s=ab3x9k` (~35 karakter).
+ *   2) Backend yoksa/başarısızsa kendi kendine yeten `#tz=` bağlantısına düşer.
+ */
+export async function buildShareUrl(tercihler: Tercih[]): Promise<string> {
+  const { data, compressed } = await encodePayload(tercihler)
+  try {
+    const res = await fetch('/api/s', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ data: (compressed ? 'z' : 'j') + data })
+    })
+    const ct = res.headers.get('content-type') || ''
+    if (res.ok && ct.includes('application/json')) {
+      const out = (await res.json()) as { id?: string }
+      if (out.id && /^[a-z0-9]+$/i.test(out.id)) {
+        const { origin, pathname } = window.location
+        return `${origin}${pathname}#s=${out.id}`
+      }
+    }
+  } catch {
+    /* backend yok (ör. localhost) veya erişilemez -> uzun bağlantı */
+  }
+  return selfContainedUrl(data, compressed)
+}
+
+// "z<base64>" / "j<base64>" (veya eski, öneksiz) metinden tercih listesi çözer.
+async function decodeData(data: string): Promise<Tercih[] | null> {
+  const marker = data[0]
+  const body = marker === 'z' || marker === 'j' ? data.slice(1) : data
+  const compressed = marker !== 'j' // önek yoksa gzip varsay (eski #tz=)
+  let json: string | null = null
+  try {
+    json = compressed
+      ? await gunzip(base64UrlDecode(body))
+      : new TextDecoder().decode(base64UrlDecode(body))
+  } catch {
+    return null
+  }
+  if (!json) return null
+  try {
+    return readPayload(JSON.parse(json))
+  } catch {
+    return null
+  }
 }
 
 /** Sayfa açılışında/hash değişiminde paylaşılan tercih listesini okur. */
 export async function readTercihlerFromUrl(): Promise<Tercih[] | null> {
   const hash = window.location.hash
+  const short = hash.match(/[#&]s=([A-Za-z0-9]+)/)
   const zipped = hash.match(/[#&]tz=([A-Za-z0-9\-_]+)/)
   const plain = hash.match(/[#&]tj=([A-Za-z0-9\-_]+)/)
-  if (!zipped && !plain) return null
+  if (!short && !zipped && !plain) return null
 
-  let json: string | null = null
-  try {
-    if (zipped) json = await gunzip(base64UrlDecode(zipped[1]))
-    else if (plain) json = new TextDecoder().decode(base64UrlDecode(plain[1]))
-  } catch {
-    return null
-  }
-  if (!json) return null
+  let list: Tercih[] | null = null
 
-  let list: Tercih[] = []
-  try {
-    list = readPayload(JSON.parse(json))
-  } catch {
-    return null
+  if (short) {
+    try {
+      const res = await fetch(`/api/s?id=${encodeURIComponent(short[1])}`)
+      const ct = res.headers.get('content-type') || ''
+      if (res.ok && ct.includes('application/json')) {
+        const out = (await res.json()) as { data?: string }
+        if (out.data) list = await decodeData(out.data)
+      }
+    } catch {
+      list = null
+    }
+  } else if (zipped) {
+    list = await decodeData('z' + zipped[1])
+  } else if (plain) {
+    list = await decodeData('j' + plain[1])
   }
 
   // Adres çubuğu temiz kalsın; geri tuşu paylaşılan hâle dönmesin.

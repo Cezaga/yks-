@@ -23,8 +23,13 @@ function deriveLevel(rows) {
     if (n) counts[n] = (counts[n] || 0) + 1
   }
   const top = Object.entries(counts).sort((a, b) => b[1] - a[1])[0]
-  const year = top ? Number(top[0]) : null
-  return year === 2 ? '2yillik' : '4yillik'
+  if (top) return Number(top[0]) === 2 ? '2yillik' : '4yillik'
+
+  // Bazı sayfalarda "(N Yıllık)" eki hiç yok (ör. Adalet). Bu durumda puan
+  // türünden çıkar: yalnızca TYT ile öğrenci alan programlar ön lisanstır.
+  const scoreTypes = new Set(rows.map(r => (r.scoreType || '').toUpperCase()).filter(Boolean))
+  if (scoreTypes.size > 0 && [...scoreTypes].every(s => s === 'TYT')) return '2yillik'
+  return '4yillik'
 }
 
 function deriveScoreTypes(rows) {

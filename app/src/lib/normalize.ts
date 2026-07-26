@@ -1,5 +1,8 @@
 const FOLD: Record<string, string> = {
-  ç: 'c', ğ: 'g', ı: 'i', ö: 'o', ş: 's', ü: 'u'
+  ç: 'c', ğ: 'g', ı: 'i', ö: 'o', ş: 's', ü: 'u',
+  // Düzeltme işaretli harfler: harita verisi "Hakkâri" yazarken kazınan veri
+  // "HAKKARİ" diyor. Eşlenmezse â silinip "hakkri" oluyor ve il hiç tutmuyordu.
+  â: 'a', î: 'i', û: 'u'
 }
 
 // Turkish-aware fold to a plain ascii key so "İSTANBUL" (scraped, uppercase)

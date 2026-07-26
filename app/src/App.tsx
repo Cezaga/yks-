@@ -7,6 +7,8 @@ import ResultsControls, { type ResultsOptions } from './components/ResultsContro
 import TercihListesi from './components/TercihListesi'
 import turkeyCities from './data/turkeyCities'
 import { loadDepartment, loadIndex } from './lib/dataLoader'
+import { readStateFromUrl } from './lib/share'
+import { replaceTercihler } from './lib/tercihler'
 import type { DepartmentData, DepartmentIndexEntry } from './types'
 import './App.css'
 
@@ -33,11 +35,43 @@ function App() {
   const patchOptions = (patch: Partial<ResultsOptions> | ((prev: ResultsOptions) => Partial<ResultsOptions>)) =>
     setOptions(prev => ({ ...prev, ...(typeof patch === 'function' ? patch(prev) : patch) }))
 
+  // Paylaşılan bağlantıdaki durumu uygular. index henüz gelmediyse bölümler
+  // atlanır; o yüzden index geldikten sonra da bir kez çağrılır.
+  const applyShared = (
+    shared: ReturnType<typeof readStateFromUrl>,
+    idx: DepartmentIndexEntry[]
+  ) => {
+    if (!shared) return
+    if (shared.plates.length) setSelectedPlates(new Set(shared.plates))
+    if (shared.tercihler.length) replaceTercihler(shared.tercihler)
+    if (shared.deptSlugs.length && idx.length) {
+      const bySlug = new Map(idx.map(d => [d.slug, d]))
+      const restored = shared.deptSlugs
+        .map(s => bySlug.get(s))
+        .filter((d): d is DepartmentIndexEntry => Boolean(d))
+      if (restored.length) setSelectedDepts(restored)
+    }
+  }
+
   useEffect(() => {
+    const shared = readStateFromUrl()
+    applyShared(shared, [])
+
     loadIndex()
-      .then(setIndex)
+      .then(idx => {
+        setIndex(idx)
+        applyShared(shared, idx)
+      })
       .catch(err => setIndexError(err.message))
   }, [])
+
+  // Site zaten açıkken paylaşım bağlantısı yapıştırılırsa yalnızca hash değişir,
+  // sayfa yeniden yüklenmez. Bu durumda da durumu uygula.
+  useEffect(() => {
+    const onHashChange = () => applyShared(readStateFromUrl(), index)
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [index])
 
   const togglePlate = (plate: string) => {
     setSelectedPlates(prev => {
@@ -143,7 +177,7 @@ function App() {
       {loadError && <div className="app-banner app-banner-error">{loadError}</div>}
 
       <section className="app-results">
-        <TercihListesi />
+        <TercihListesi plates={[...selectedPlates]} deptSlugs={selectedDepts.map(d => d.slug)} />
         {results.length > 0 && (
           <ResultsControls options={options} onChange={patchOptions} />
         )}

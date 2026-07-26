@@ -115,3 +115,13 @@ export function clearTercihler() {
   state = []
   emit()
 }
+
+/** Paylaşılan bağlantıdan gelen listeyi yükler (mevcut listenin yerine geçer). */
+export function replaceTercihler(list: Tercih[]) {
+  state = list.slice(0, MAX_TERCIH)
+  emit()
+}
+
+export function getTercihler(): Tercih[] {
+  return state
+}

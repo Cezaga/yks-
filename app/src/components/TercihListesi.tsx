@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   MAX_TERCIH,
   clearTercihler,
@@ -5,11 +6,23 @@ import {
   removeTercih,
   useTercihler
 } from '../lib/tercihler'
+import { buildShareUrl } from '../lib/share'
 import './TercihListesi.css'
 
-export default function TercihListesi() {
+interface TercihListesiProps {
+  plates: string[]
+  deptSlugs: string[]
+}
+
+export default function TercihListesi({ plates, deptSlugs }: TercihListesiProps) {
   const list = useTercihler()
+  const [durum, setDurum] = useState<string | null>(null)
   if (list.length === 0) return null
+
+  const bildir = (msg: string) => {
+    setDurum(msg)
+    window.setTimeout(() => setDurum(null), 2500)
+  }
 
   const yazdir = () => window.print()
 
@@ -19,8 +32,19 @@ export default function TercihListesi() {
       .join('\n')
     try {
       await navigator.clipboard.writeText(text)
+      bildir('Liste panoya kopyalandı.')
     } catch {
-      // pano izni yoksa sessizce geç
+      bildir('Kopyalanamadı (tarayıcı izin vermedi).')
+    }
+  }
+
+  const paylas = async () => {
+    const url = buildShareUrl({ plates, deptSlugs, tercihler: list })
+    try {
+      await navigator.clipboard.writeText(url)
+      bildir('Paylaşım bağlantısı kopyalandı.')
+    } catch {
+      bildir('Bağlantı oluşturuldu ama panoya kopyalanamadı.')
     }
   }
 
@@ -31,6 +55,7 @@ export default function TercihListesi() {
           Tercih Listem <span className="tercih-count">{list.length}/{MAX_TERCIH}</span>
         </h2>
         <div className="tercih-actions">
+          <button type="button" onClick={paylas}>Paylaş</button>
           <button type="button" onClick={kopyala}>Kopyala</button>
           <button type="button" onClick={yazdir}>Yazdır</button>
           <button
@@ -87,9 +112,10 @@ export default function TercihListesi() {
           </li>
         ))}
       </ol>
+      {durum && <p className="tercih-durum">{durum}</p>}
       <p className="tercih-not">
         Liste tarayıcında saklanır; sayfayı kapatsan da durur. Sıralama, ÖSYM tercih formundaki
-        sıranı temsil eder.
+        sıranı temsil eder. "Paylaş" bağlantısı listeni ve seçtiğin il/bölümleri içerir.
       </p>
     </section>
   )

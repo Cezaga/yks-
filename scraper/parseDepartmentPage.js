@@ -89,8 +89,12 @@ export function parseDepartmentPage(html, { name, slug, level, scoreType: listSc
   // year:-1 means "no dedicated Yıl column" (compact variant where years are
   // embedded inline in the Sıralama column, e.g. "250.752 (2023)").
   const col = { uni: 0, program: 1, scoreType: 2, year: -1, quota: 4, placed: 5, rank: 6, score: 7 }
+  // Eski (2023) düzende yıllar ayrı sütunda değil, başlığın kendisinde listeleniyor:
+  //   "Başarı Sırası 2022 2021 2020 2019" — hücrelerde değerler aynı sırayla alt alta.
+  let headerYears = []
   headerCells.each((i, th) => {
-    const t = $(th).text().replace(/\s+/g, ' ').trim().toLocaleLowerCase('tr')
+    const raw = $(th).text().replace(/\s+/g, ' ').trim()
+    const t = raw.toLocaleLowerCase('tr')
     if (/üniversite/.test(t)) col.uni = i
     else if (/bölüm/.test(t)) col.program = i
     else if (/puan türü/.test(t)) col.scoreType = i
@@ -99,9 +103,33 @@ export function parseDepartmentPage(html, { name, slug, level, scoreType: listSc
     else if (/yer\b|yerleş/.test(t)) col.placed = i
     else if (/taban pua/.test(t)) col.score = i
     else if (/başarı sıra|sıralama/.test(t)) col.rank = i
+
+    if (/başarı sıra|sıralama|kont|taban pua/.test(t)) {
+      const ys = [...raw.matchAll(/\b((?:19|20)\d{2})\b/g)].map(m => Number(m[1]))
+      if (ys.length > headerYears.length) headerYears = ys
+    }
   })
 
-  trs.slice(1).each((_, tr) => {
+  // Bu düzende veri birden çok tabloya bölünebiliyor; ilkinden sonra gelen ve
+  // aynı hücre sayısına sahip tabloların TÜM satırları veri satırıdır.
+  const allTables = $('table').get()
+  const startIdx = allTables.indexOf(table.get(0))
+  const extraRows = []
+  if (startIdx >= 0) {
+    for (const t of allTables.slice(startIdx + 1)) {
+      const rs = $(t).find('tr')
+      if (rs.length === 0) break
+      const firstCells = $(rs.get(0)).find('td,th').length
+      if (firstCells !== headerCells.length) break
+      // başlık tekrarı ise atla, değilse tüm satırları al
+      const looksHeader = /üniversite/iu.test($(rs.get(0)).text())
+      rs.slice(looksHeader ? 1 : 0).each((_, tr) => extraRows.push(tr))
+    }
+  }
+
+  const dataRows = [...trs.slice(1).get(), ...extraRows]
+
+  $(dataRows).each((_, tr) => {
     const cells = $(tr).find('td')
     if (cells.length < 7) return
 
@@ -123,6 +151,17 @@ export function parseDepartmentPage(html, { name, slug, level, scoreType: listSc
       // Derive years from "(YYYY)" tags inside the Sıralama column.
       yearLines = rankLinesRaw.map(l => (l.match(/\((\d{4})\)/) || [])[1]).filter(Boolean)
       rankLines = rankLinesRaw.map(l => l.replace(/\s*\(\d{4}\)\s*/, '').trim())
+
+      // Eski düzen: yıl ne sütunda ne de hücrede; başlıkta listelenmiş.
+      // Hücredeki değerler başlıktaki yıl sırasıyla birebir eşleşir.
+      if (yearLines.length === 0 && headerYears.length > 0) {
+        const n = Math.min(
+          headerYears.length,
+          Math.max(rankLinesRaw.length, scoreLines.length, quotaLines.length)
+        )
+        yearLines = headerYears.slice(0, n).map(String)
+        rankLines = rankLinesRaw
+      }
     }
     if (yearLines.length === 0) return
 

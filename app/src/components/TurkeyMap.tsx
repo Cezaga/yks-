@@ -37,7 +37,9 @@ export default function TurkeyMap({ selected, onToggle }: TurkeyMapProps) {
         onMouseMove={handleMove}
         onMouseLeave={() => setHovered(null)}
       >
-        {turkeyCities.map(city => (
+        {/* draw'ı boş kayıtlar (ör. KKTC) haritada çizilmez; yalnızca
+            şehir arama kutusundan seçilebilirler. */}
+        {turkeyCities.filter(c => c.draw).map(city => (
           <g key={city.plate} data-plate={city.plate} data-city={city.city}>
             <path
               d={city.draw}

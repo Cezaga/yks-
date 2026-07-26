@@ -124,3 +124,54 @@
 .city-search {
   margin-bottom: 12px;
 }
+
+/* --- mobil ---------------------------------------------------------------
+   Telefonda 24px'lik dış boşluk + 16px panel boşluğu içeriğe 295px bırakıyordu.
+   Boşlukları kısıp okunabilir alanı genişletiyoruz; "Onayla" da ekranın altına
+   sabitleniyor ki 46 bölüm chip'inin ardından aşağı kaydırmak gerekmesin.
+------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 14px 12px 24px;
+  }
+
+  .app-header h1 {
+    font-size: 19px;
+    line-height: 1.25;
+  }
+
+  .app-header p {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+
+  .app-main {
+    gap: 14px;
+  }
+
+  .app-panel {
+    padding: 12px 10px;
+    border-radius: 10px;
+  }
+
+  .turkey-map-wrapper {
+    margin-top: 4px;
+  }
+
+  .app-confirm-row {
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+    margin: 16px -12px 0;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: color-mix(in srgb, var(--panel-bg, #1a1d24) 94%, transparent);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border, #333);
+  }
+
+  .app-confirm-button {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}

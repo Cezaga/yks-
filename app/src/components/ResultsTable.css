@@ -249,28 +249,107 @@
 }
 
 @media (max-width: 640px) {
-  /* Dar ekranda kompakt satır sarsın ki tablo viewport'a sığsın; aksi hâlde
-     açılan detay kutusu da tablo genişliğinde kalıp yatay kaydırma isterdi. */
+  /* --- mobil: tablo yerine kart -------------------------------------------
+     375px'e 6 sütun sığmıyor; sıkıştırınca da okunmuyordu. Dar ekranda her
+     satırı kendi kartına çeviriyoruz:
+
+        [+]  Bölüm Adı                 12.345
+             İL · Üniversite                ›
+  ------------------------------------------------------------------------ */
+  .results-table,
+  .results-table tbody,
+  .results-table tr,
+  .results-table td {
+    display: block;
+  }
+
+  .results-table thead {
+    display: none; /* başlık satırının kartta karşılığı yok */
+  }
+
   .results-table {
     white-space: normal;
-    font-size: 12.5px;
+    font-size: 13px;
   }
 
-  .results-table th,
-  .results-table td {
-    padding: 7px 8px;
+  .results-table-wrapper {
+    overflow-x: visible; /* kart düzeninde yatay kaydırmaya gerek kalmadı */
   }
 
-  .rt-primary {
+  .results-table tbody tr.rt-row {
+    display: grid;
+    grid-template-columns: 40px minmax(0, auto) minmax(0, 1fr) auto;
+    grid-template-areas:
+      'fav program program rank'
+      'fav city    uni     chev';
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 3px;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border, #2a2a2a);
+  }
+
+  .results-table tbody tr.rt-row > td {
+    padding: 0;
+    border: none;
+    overflow-wrap: anywhere;
+  }
+
+  .rt-fav-col {
+    grid-area: fav;
+    width: auto;
+  }
+  .rt-program {
+    grid-area: program;
+    min-width: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .rt-city {
+    grid-area: city;
+    font-size: 11.5px;
+    opacity: 0.65;
     white-space: nowrap;
   }
-
-  .rt-program {
-    min-width: 0;
+  .rt-city::after {
+    content: ' ·';
+  }
+  .rt-uni {
+    grid-area: uni;
+    font-size: 11.5px;
+    opacity: 0.75;
+    line-height: 1.35;
+  }
+  .rt-primary {
+    grid-area: rank;
+    align-self: center;
+    white-space: nowrap;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    padding: 2px 9px !important;
+    border-radius: 999px;
+    background: var(--chip-bg, #24304a);
+  }
+  .rt-chevron-col {
+    grid-area: chev;
+    width: auto;
+    justify-self: end;
   }
 
-  .results-table td {
-    overflow-wrap: anywhere;
+  /* Kart düzeninde dokunma hedefi büyüsün (parmak ucu ~44px). */
+  .rt-fav {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+
+  .results-table tbody tr.rt-row.is-open {
+    border-bottom-color: transparent;
+  }
+
+  .rt-detail-row > td {
+    padding: 0 0 10px;
   }
 
   .program-details {
@@ -292,6 +371,51 @@
 
   .pd-stats {
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  /* --- alan bölümü başlığı --- */
+  .results-fields {
+    gap: 18px;
+  }
+
+  .field-section {
+    padding: 12px 10px;
+    border-radius: 10px;
+  }
+
+  .field-section-head {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .field-section-head h2 {
+    font-size: 16px;
+  }
+
+  /* Sıra aralığı kutuları tek satırda eşit paylaşsın; iOS'ta odaklanınca
+     sayfayı yakınlaştırmaması için yazı boyutu 16px. */
+  .field-section-head .rc-range {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .field-section-head .rc-range input {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .results-city-head {
+    padding: 8px 12px;
+  }
+
+  .results-city-head h3 {
+    font-size: 14px;
   }
 }
 

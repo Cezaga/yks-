@@ -17,6 +17,27 @@
 body {
   margin: 0;
   background: #101216;
+  /* Bir bileşen taşarsa tüm sayfa yana kaymasın (mobilde en can sıkıcı hata). */
+  overflow-x: hidden;
+  /* Dokunulan her öğeye mavi kare basılmasın; :active ile kendimiz belirtiyoruz. */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Mobilde 16px'ten küçük yazılı bir alana odaklanınca iOS Safari sayfayı
+   otomatik yakınlaştırır ve düzen bozulur. Tüm girdileri 16px'e sabitliyoruz. */
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Dokunmatik cihazda basılma geri bildirimi (hover yok). */
+@media (hover: none) {
+  button:active {
+    opacity: 0.7;
+  }
 }
 
 @media (prefers-color-scheme: light) {

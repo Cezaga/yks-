@@ -197,3 +197,67 @@
   color: var(--map-fill-selected, #3b82f6);
   font-weight: 600;
 }
+
+/* --- mobil -------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .tercih-panel {
+    padding: 12px 10px;
+    margin-bottom: 18px;
+  }
+
+  .tercih-head {
+    gap: 8px;
+  }
+
+  .tercih-head h2 {
+    font-size: 16px;
+  }
+
+  /* Dört düğme 375px'te tek satıra sığmıyordu; eşit paylaşıp sarıyorlar. */
+  .tercih-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .tercih-actions button {
+    padding: 9px 4px;
+    font-size: 12px;
+  }
+
+  /* Sıra numarası + bilgi üstte, taşıma düğmeleri altta: uzun bölüm adları
+     kontrol düğmelerini sıkıştırmasın. */
+  .tercih-list li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      'no  bilgi'
+      'no  kontrol';
+    align-items: center;
+    row-gap: 6px;
+    padding: 9px 10px;
+  }
+
+  .tercih-no {
+    grid-area: no;
+    align-self: start;
+    margin-top: 2px;
+  }
+
+  .tercih-bilgi {
+    grid-area: bilgi;
+  }
+
+  .tercih-kontrol {
+    grid-area: kontrol;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .tercih-kontrol button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}

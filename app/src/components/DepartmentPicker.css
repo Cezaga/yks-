@@ -160,3 +160,43 @@
 .department-picker-chip button:hover {
   opacity: 1;
 }
+
+/* --- mobil -------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .department-picker-input {
+    padding: 12px;
+    font-size: 16px; /* iOS'ta odaklanınca sayfayı yakınlaştırmasın */
+  }
+
+  /* Öneri listesi klavye açıkken ekranı kaplamasın. */
+  .department-picker-suggestions {
+    max-height: 44vh;
+  }
+
+  .department-picker-suggestions li button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* Chip'ler ve paket düğmeleri parmakla rahat basılsın. */
+  .department-picker-chip {
+    font-size: 13.5px;
+    padding: 7px 6px 7px 13px;
+  }
+
+  /* "×" glifi dar olduğu için sadece dolgu yetmiyor; kutuyu açıkça büyütüyoruz. */
+  .department-picker-chip button {
+    font-size: 18px;
+    min-width: 30px;
+    min-height: 30px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .department-picker-package-btn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}

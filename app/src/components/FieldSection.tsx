@@ -122,8 +122,8 @@ function Table({ rows, isOpen, onToggle }: TableProps) {
                     )
                   })()}
                 </td>
-                <td>{r.city}</td>
-                <td>{r.university}</td>
+                <td className="rt-city">{r.city}</td>
+                <td className="rt-uni">{r.university}</td>
                 <td className="rt-program">{r.program}</td>
                 <td className="rt-primary">{r.byYear.get(BASE_YEAR)?.rank ?? '—'}</td>
                 <td className="rt-chevron-col">

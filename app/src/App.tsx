@@ -4,6 +4,7 @@ import CitySearch from './components/CitySearch'
 import DepartmentPicker from './components/DepartmentPicker'
 import ResultsTable from './components/ResultsTable'
 import ResultsControls, { type ResultsOptions } from './components/ResultsControls'
+import TercihListesi from './components/TercihListesi'
 import turkeyCities from './data/turkeyCities'
 import { loadDepartment, loadIndex } from './lib/dataLoader'
 import type { DepartmentData, DepartmentIndexEntry } from './types'
@@ -142,6 +143,7 @@ function App() {
       {loadError && <div className="app-banner app-banner-error">{loadError}</div>}
 
       <section className="app-results">
+        <TercihListesi />
         {results.length > 0 && (
           <ResultsControls options={options} onChange={patchOptions} />
         )}

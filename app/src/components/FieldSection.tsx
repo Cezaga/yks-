@@ -2,11 +2,12 @@ import { useMemo, useState } from 'react'
 import type { SortDir, GroupMode } from './ResultsControls'
 import { BASE_YEAR, type ProgramRow, type RankRange } from './programRow'
 import ProgramDetails from './ProgramDetails'
+import { MAX_TERCIH, tercihKey, toggleTercih, useTercihler } from '../lib/tercihler'
 
 export { BASE_YEAR }
 export type { ProgramRow, RankRange }
 
-const COL_COUNT = 5
+const COL_COUNT = 6
 
 interface FieldSectionProps {
   label: string
@@ -50,11 +51,17 @@ interface TableProps {
 }
 
 function Table({ rows, isOpen, onToggle }: TableProps) {
+  const tercihler = useTercihler()
+  const ekliKeys = useMemo(() => new Set(tercihler.map(t => t.key)), [tercihler])
+
   return (
     <div className="results-table-wrapper">
       <table className="results-table">
         <thead>
           <tr>
+            <th className="rt-fav-col">
+              <span className="rt-sr-only">Tercih</span>
+            </th>
             <th>İl</th>
             <th>Üniversite</th>
             <th>Bölüm</th>
@@ -84,6 +91,37 @@ function Table({ rows, isOpen, onToggle }: TableProps) {
                   }
                 }}
               >
+                <td className="rt-fav-col">
+                  {(() => {
+                    const tk = tercihKey(r)
+                    const ekli = ekliKeys.has(tk)
+                    return (
+                      <button
+                        type="button"
+                        className={`rt-fav${ekli ? ' is-ekli' : ''}`}
+                        aria-label={ekli ? 'Tercih listesinden çıkar' : 'Tercih listeme ekle'}
+                        title={ekli ? 'Tercih listesinden çıkar' : 'Tercih listeme ekle'}
+                        onClick={e => {
+                          e.stopPropagation() // satırın detayını açmasın
+                          const ok = toggleTercih({
+                            key: tk,
+                            city: r.city,
+                            university: r.university,
+                            faculty: r.faculty,
+                            program: r.program,
+                            programRaw: r.programRaw,
+                            scoreType: r.scoreType,
+                            funding: r.funding,
+                            rank: r.byYear.get(BASE_YEAR)?.rank ?? null
+                          })
+                          if (!ok) alert(`Tercih listesi dolu (en fazla ${MAX_TERCIH} tercih).`)
+                        }}
+                      >
+                        {ekli ? '★' : '+'}
+                      </button>
+                    )
+                  })()}
+                </td>
                 <td>{r.city}</td>
                 <td>{r.university}</td>
                 <td className="rt-program">{r.program}</td>

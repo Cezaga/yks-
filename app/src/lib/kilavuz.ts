@@ -273,7 +273,7 @@ export interface KilavuzLookupInput {
 // en sadeye doğru varyant üretip ilk eşleşen varyantta duruyoruz.
 const INST_END = /(ÜNİVERSİTESİ|YÜKSEKOKULU|ENSTİTÜSÜ|KONSERVATUVARI|AKADEMİSİ|FAKÜLTESİ)/i
 
-function universityVariants(raw: string): string[] {
+export function universityVariants(raw: string): string[] {
   const out: string[] = []
   const add = (s: string) => {
     const t = s.replace(/\s+/g, ' ').trim()

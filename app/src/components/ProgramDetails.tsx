@@ -7,6 +7,7 @@ import {
   resolveConditions,
   type KilavuzData
 } from '../lib/kilavuz'
+import { EMPTY_FEES, findFee, formatFee, loadFees, type FeeData, type FeeLevel } from '../lib/fees'
 
 const DASH = '—'
 
@@ -103,13 +104,54 @@ function KilavuzSection({ row, kilavuz }: { row: ProgramRow; kilavuz: KilavuzDat
   )
 }
 
+// "(4 Yıllık)" / "(2 Yıllık)" ekinden öğrenim düzeyini çıkarır.
+function levelOf(row: ProgramRow): FeeLevel | null {
+  const m = row.programRaw.match(/\((\d)\s*Y[ıi]ll[ıi]k\)/iu)
+  if (!m) return null
+  return m[1] === '2' ? 'onlisans' : 'lisans'
+}
+
+function FeeSection({ row, fees }: { row: ProgramRow; fees: FeeData }) {
+  const level = levelOf(row)
+  const match = useMemo(
+    () => findFee(fees, { university: row.university, program: row.program, level }),
+    [fees, row, level]
+  )
+
+  // Devlet üniversitelerinde öğrenim ücreti yoktur; veri yüklenmediyse de gösterme.
+  if (row.funding === 'Devlet' || !fees.available || !match) return null
+
+  const { record, generic } = match
+  return (
+    <section className="pd-block">
+      <h4 className="pd-block-title">
+        Öğrenim Ücreti (2026-2027)
+        {generic && <span className="pd-note"> (kurum geneli için verilen ücret)</span>}
+      </h4>
+      <div className="pd-stats">
+        <Stat label="Tam (ücretli) yıllık ücret" value={formatFee(record.fee)} />
+        <Stat label="Kaynak kayıt" value={record.program} />
+      </div>
+      <p className="pd-empty">
+        Bu, indirimsiz "ücretli" fiyattır.
+        {row.funding !== 'Ücretli' && ` Bu program ${row.funding.toLocaleLowerCase('tr')} olduğu için üniversite indirim uygular.`}
+        {record.note ? ` ${record.note}` : ''}
+      </p>
+    </section>
+  )
+}
+
 export default function ProgramDetails({ row }: { row: ProgramRow }) {
   const [kilavuz, setKilavuz] = useState<KilavuzData>(EMPTY_KILAVUZ)
+  const [fees, setFees] = useState<FeeData>(EMPTY_FEES)
 
   useEffect(() => {
     let alive = true
     loadKilavuz().then(data => {
       if (alive) setKilavuz(data)
+    })
+    loadFees().then(data => {
+      if (alive) setFees(data)
     })
     return () => {
       alive = false
@@ -178,6 +220,8 @@ export default function ProgramDetails({ row }: { row: ProgramRow }) {
           <Stat label="Uyruk" value={row.nationality === 'KKTC' ? 'KKTC Uyruklu' : 'T.C. Uyruklu'} />
         </div>
       </section>
+
+      <FeeSection row={row} fees={fees} />
 
       <KilavuzSection row={row} kilavuz={kilavuz} />
     </div>

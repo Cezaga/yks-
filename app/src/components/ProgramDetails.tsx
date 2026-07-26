@@ -136,6 +136,10 @@ function FeeSection({ row, fees }: { row: ProgramRow; fees: FeeData }) {
         Bu, indirimsiz "ücretli" fiyattır.
         {row.funding !== 'Ücretli' && ` Bu program ${row.funding.toLocaleLowerCase('tr')} olduğu için üniversite indirim uygular.`}
         {record.note ? ` ${record.note}` : ''}
+        {' '}
+        <span className="pd-warn">
+          (Fiyatlar kesin olmayabilir. Kendiniz sağlamasını yapmanız önerilir.)
+        </span>
       </p>
     </section>
   )

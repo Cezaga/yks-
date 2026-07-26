@@ -10,8 +10,21 @@
 // KV bağlı DEĞİLSE 503 döner; istemci o zaman kendi kendine yeten uzun
 // bağlantıya (#tz=) düşer. Yani depo olmadan da uygulama çalışır.
 
-const REST_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL
-const REST_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN
+// Upstash/Vercel KV entegrasyonu değişkenleri özel bir ÖNEK ile eklemiş olabilir
+// (ör. STORAGE_KV_REST_API_URL). Bu yüzden adı sabitlemiyoruz; önek ne olursa
+// olsun REST HTTPS uç noktasını ve token'ı ADLARINA GÖRE otomatik buluyoruz.
+function pickEnv(nameRegex, requireHttps) {
+  for (const [key, val] of Object.entries(process.env)) {
+    if (!val) continue
+    if (!nameRegex.test(key)) continue
+    if (requireHttps && !/^https:\/\//i.test(val)) continue // redis:// bağlantı dizesini alma
+    return val
+  }
+  return undefined
+}
+
+const REST_URL = pickEnv(/(REST_API_URL|REST_URL)$/i, true)
+const REST_TOKEN = pickEnv(/(REST_API_TOKEN|REST_TOKEN)$/i, false)
 
 const TTL_SECONDS = 60 * 60 * 24 * 180 // 180 gün
 const MAX_DATA = 40000 // ~40 KB üst sınır (kötüye kullanımı önler)

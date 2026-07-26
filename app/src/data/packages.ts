@@ -36,7 +36,11 @@ export const PACKAGES: DepartmentPackage[] = [
       'mekatronik-muhendisligi-2024-taban-puanlari-ve-basari-siralamasi',
       'mimarlik-2024-taban-puanlari-ve-basari-siralamasi',
       'istatistik-2024-taban-puanlari-ve-basari-siralamasi',
-      'fizyoterapi-2-yillik-2024-taban-puanlari-ve-basari-siralamasi'
+      'fizyoterapi-2-yillik-2024-taban-puanlari-ve-basari-siralamasi',
+      'diyaliz-2-yillik-2024-taban-puanlari-ve-basari-siralamasi',
+      'anestezi-2024-taban-puanlari-ve-basari-siralamasi',
+      'fizyoterapi-ve-rehabilitasyon-2024-taban-puanlari-ve-basari-siralamasi',
+      'matematik-2024-taban-puanlari-ve-basari-siralamasi'
     ]
   },
   {

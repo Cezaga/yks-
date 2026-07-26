@@ -9,12 +9,7 @@ import {
 import { buildShareUrl } from '../lib/share'
 import './TercihListesi.css'
 
-interface TercihListesiProps {
-  plates: string[]
-  deptSlugs: string[]
-}
-
-export default function TercihListesi({ plates, deptSlugs }: TercihListesiProps) {
+export default function TercihListesi() {
   const list = useTercihler()
   const [durum, setDurum] = useState<string | null>(null)
   if (list.length === 0) return null
@@ -39,7 +34,7 @@ export default function TercihListesi({ plates, deptSlugs }: TercihListesiProps)
   }
 
   const paylas = async () => {
-    const url = buildShareUrl({ plates, deptSlugs, tercihler: list })
+    const url = await buildShareUrl(list)
     try {
       await navigator.clipboard.writeText(url)
       bildir('Paylaşım bağlantısı kopyalandı.')

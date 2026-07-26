@@ -1,29 +1,12 @@
-import { useMemo } from 'react'
-import type { YearEntry } from '../types'
+import { useMemo, useState } from 'react'
 import type { SortDir, GroupMode } from './ResultsControls'
+import { BASE_YEAR, type ProgramRow, type RankRange } from './programRow'
+import ProgramDetails from './ProgramDetails'
 
-export const BASE_YEAR = 2025
-const PAST_YEARS = [2024, 2023, 2022]
+export { BASE_YEAR }
+export type { ProgramRow, RankRange }
 
-export interface ProgramRow {
-  key: string
-  departmentName: string
-  university: string
-  faculty: string | null
-  city: string
-  program: string
-  scoreType: string
-  funding: string
-  nationality: string
-  language: string
-  byYear: Map<number, YearEntry>
-  baseRank: number | null
-}
-
-export interface RankRange {
-  min: string
-  max: string
-}
+const COL_COUNT = 5
 
 interface FieldSectionProps {
   label: string
@@ -56,65 +39,70 @@ function sortRows(rows: ProgramRow[], sortDir: SortDir): ProgramRow[] {
   })
 }
 
-function HeadCols() {
-  return (
-    <>
-      <th>İl</th>
-      <th>Üniversite</th>
-      <th>Bölüm</th>
-      <th>Ücret</th>
-      <th>Dil</th>
-      <th>{BASE_YEAR} Kont.</th>
-      <th>{BASE_YEAR} Yerleşen</th>
-      <th>{BASE_YEAR} Sıra</th>
-      <th>{BASE_YEAR} Puan</th>
-      {PAST_YEARS.map(y => (
-        <th key={y}>{y} Sıra</th>
-      ))}
-    </>
-  )
+function detailId(key: string): string {
+  return `pd-${key.replace(/[^a-zA-Z0-9_-]+/g, '-')}`
 }
 
-function RowCells({ row }: { row: ProgramRow }) {
-  const base = row.byYear.get(BASE_YEAR)
-  return (
-    <>
-      <td>{row.city}</td>
-      <td>
-        {row.university}
-        {row.faculty && <div className="results-faculty">{row.faculty}</div>}
-      </td>
-      <td>{row.program}</td>
-      <td>{row.funding}</td>
-      <td>{row.language}</td>
-      <td>{base?.quota ?? '—'}</td>
-      <td>{base?.placed ?? '—'}</td>
-      <td className="rt-primary">{base?.rank ?? '—'}</td>
-      <td>{base?.score ?? '—'}</td>
-      {PAST_YEARS.map(y => (
-        <td key={y} className="rt-past">
-          {row.byYear.get(y)?.rank ?? '—'}
-        </td>
-      ))}
-    </>
-  )
+interface TableProps {
+  rows: ProgramRow[]
+  isOpen: (key: string) => boolean
+  onToggle: (key: string) => void
 }
 
-function Table({ rows }: { rows: ProgramRow[] }) {
+function Table({ rows, isOpen, onToggle }: TableProps) {
   return (
     <div className="results-table-wrapper">
       <table className="results-table">
         <thead>
           <tr>
-            <HeadCols />
+            <th>İl</th>
+            <th>Üniversite</th>
+            <th>Bölüm</th>
+            <th>{BASE_YEAR} Sıra</th>
+            <th className="rt-chevron-col">
+              <span className="rt-sr-only">Detay</span>
+            </th>
           </tr>
         </thead>
         <tbody>
-          {rows.map(r => (
-            <tr key={r.key}>
-              <RowCells row={r} />
-            </tr>
-          ))}
+          {rows.map(r => {
+            const open = isOpen(r.key)
+            const id = detailId(r.key)
+            return [
+              <tr
+                key={r.key}
+                className={`rt-row${open ? ' is-open' : ''}`}
+                role="button"
+                tabIndex={0}
+                aria-expanded={open}
+                aria-controls={id}
+                onClick={() => onToggle(r.key)}
+                onKeyDown={e => {
+                  if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                    e.preventDefault()
+                    onToggle(r.key)
+                  }
+                }}
+              >
+                <td>{r.city}</td>
+                <td>{r.university}</td>
+                <td className="rt-program">{r.program}</td>
+                <td className="rt-primary">{r.byYear.get(BASE_YEAR)?.rank ?? '—'}</td>
+                <td className="rt-chevron-col">
+                  <span className="rt-chevron" aria-hidden="true">
+                    ›
+                  </span>
+                </td>
+              </tr>,
+              open ? (
+                <tr key={`${r.key}::detail`} className="rt-detail-row">
+                  <td id={id} colSpan={COL_COUNT}>
+                    <ProgramDetails row={r} />
+                  </td>
+                </tr>
+              ) : null
+            ]
+          })}
         </tbody>
       </table>
     </div>
@@ -123,6 +111,17 @@ function Table({ rows }: { rows: ProgramRow[] }) {
 
 export default function FieldSection({ label, rows, range, onRangeChange, sortDir, groupMode }: FieldSectionProps) {
   const visible = useMemo(() => sortRows(applyRange(rows, range), sortDir), [rows, range, sortDir])
+
+  // Birden fazla satır aynı anda açık kalabilir.
+  const [expanded, setExpanded] = useState<Set<string>>(() => new Set())
+  const toggle = (key: string) =>
+    setExpanded(prev => {
+      const next = new Set(prev)
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
+  const isOpen = (key: string) => expanded.has(key)
 
   const cityGroups = useMemo(() => {
     const map = new Map<string, ProgramRow[]>()
@@ -180,12 +179,12 @@ export default function FieldSection({ label, rows, range, onRangeChange, sortDi
                 <h3>{city}</h3>
                 <span>{cityRows.length} program</span>
               </header>
-              <Table rows={cityRows} />
+              <Table rows={cityRows} isOpen={isOpen} onToggle={toggle} />
             </div>
           ))}
         </div>
       ) : (
-        <Table rows={visible} />
+        <Table rows={visible} isOpen={isOpen} onToggle={toggle} />
       )}
     </section>
   )

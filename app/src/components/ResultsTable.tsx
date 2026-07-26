@@ -3,7 +3,8 @@ import type { DepartmentData } from '../types'
 import { cityKey } from '../lib/normalize'
 import { deriveFunding, deriveNationality, deriveLanguage, SCORE_FIELDS } from '../lib/classify'
 import type { ResultsOptions } from './ResultsControls'
-import FieldSection, { BASE_YEAR, type ProgramRow, type RankRange } from './FieldSection'
+import FieldSection from './FieldSection'
+import { BASE_YEAR, type ProgramRow, type RankRange } from './programRow'
 import './ResultsTable.css'
 
 export { BASE_YEAR }
@@ -32,6 +33,7 @@ function buildRows(departments: DepartmentData[], cityKeys: Set<string>): Progra
         faculty: row.faculty,
         city: row.city,
         program: row.program,
+        programRaw: row.programRaw || row.program,
         scoreType: (row.scoreType || '').toUpperCase(),
         funding: deriveFunding(row.sector, row.programRaw),
         nationality: deriveNationality(row.programRaw),

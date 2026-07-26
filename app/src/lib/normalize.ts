@@ -12,3 +12,9 @@ export function cityKey(input: string): string {
     .join('')
     .replace(/[^a-z0-9]/g, '')
 }
+
+// Same rule as cityKey, named per docs/KILAVUZ_CONTRACT.md so kılavuz matchKeys
+// ("<uni>||<program>") are produced with exactly the parser's normalisation.
+export function normalizeKey(input: string | null | undefined): string {
+  return input ? cityKey(input) : ''
+}

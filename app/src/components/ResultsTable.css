@@ -31,22 +31,255 @@
   font-weight: 600;
 }
 
-.results-table tbody tr:hover {
+/* --- kompakt satır + açılır detay ------------------------------------- */
+
+.results-table tbody tr.rt-row {
+  cursor: pointer;
+}
+
+.results-table tbody tr.rt-row:hover {
   background: var(--map-fill-hover, #22262f);
 }
 
-.results-faculty {
-  font-size: 11.5px;
-  opacity: 0.6;
+.results-table tbody tr.rt-row:focus-visible {
+  outline: 2px solid var(--map-fill-selected, #3b82f6);
+  outline-offset: -2px;
+}
+
+.results-table tbody tr.rt-row.is-open {
+  background: color-mix(in srgb, var(--map-fill-selected, #3b82f6) 14%, transparent);
+}
+
+.results-table tbody tr.rt-row.is-open > td {
+  border-bottom-color: transparent;
+}
+
+.rt-program {
   white-space: normal;
+  min-width: 180px;
+}
+
+.rt-chevron-col {
+  width: 34px;
+  text-align: center !important;
+}
+
+.rt-chevron {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 1;
+  opacity: 0.55;
+  transition: transform 0.15s ease;
+}
+
+.rt-row.is-open .rt-chevron {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+.rt-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.rt-detail-row > td {
+  padding: 0 0 12px 0;
+  white-space: normal;
+  background: color-mix(in srgb, var(--map-fill-selected, #3b82f6) 6%, transparent);
 }
 
 .rt-primary {
   font-weight: 600;
 }
 
-.rt-past {
+/* --- detay kutusu ------------------------------------------------------ */
+
+.program-details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 12px;
+  padding: 14px;
+  border: 1px solid var(--border, #333);
+  border-radius: 10px;
+  background: var(--panel-bg, #1a1d24);
+  font-size: 13px;
+  max-width: 100%;
+}
+
+.pd-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.pd-block-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  /* text-transform: uppercase kullanılmıyor: tarayıcı "İ/ı" harflerini
+     Türkçe kurallarına göre büyütmediği için başlıklar bozuluyor. */
+  opacity: 0.8;
+  border-bottom: 1px solid var(--border, #333);
+  padding-bottom: 5px;
+}
+
+.pd-note {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.pd-empty {
+  margin: 0;
   opacity: 0.6;
+}
+
+.pd-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 8px 14px;
+  min-width: 0;
+}
+
+.pd-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.pd-stat-label {
+  font-size: 11px;
+  opacity: 0.6;
+  white-space: normal;
+}
+
+.pd-stat-value {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.pd-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border, #333);
+  border-radius: 8px;
+  max-width: 100%;
+  /* flex/grid içinde min-content genişliğine kilitlenmesin: dar ekranda
+     tablo kendi içinde kaysın, dış tabloyu şişirmesin. */
+  min-width: 0;
+}
+
+.pd-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+.pd-table th,
+.pd-table td {
+  padding: 6px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border, #2a2a2a);
+}
+
+.pd-table th {
+  font-weight: 600;
+  opacity: 0.75;
+  background: color-mix(in srgb, var(--chip-bg, #24304a) 55%, transparent);
+}
+
+.pd-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pd-conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pd-conditions ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pd-conditions li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.45;
+}
+
+.pd-cond-code {
+  flex: 0 0 auto;
+  min-width: 30px;
+  text-align: center;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--chip-bg, #24304a);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  /* Dar ekranda kompakt satır sarsın ki tablo viewport'a sığsın; aksi hâlde
+     açılan detay kutusu da tablo genişliğinde kalıp yatay kaydırma isterdi. */
+  .results-table {
+    white-space: normal;
+    font-size: 12.5px;
+  }
+
+  .results-table th,
+  .results-table td {
+    padding: 7px 8px;
+  }
+
+  .rt-primary {
+    white-space: nowrap;
+  }
+
+  .rt-program {
+    min-width: 0;
+  }
+
+  .results-table td {
+    overflow-wrap: anywhere;
+  }
+
+  .program-details {
+    margin: 0 6px;
+    padding: 10px;
+  }
+
+  /* Geçmiş yıllar tablosu dar ekranda başlıkları sarsın; yoksa detay kutusu
+     viewport'tan geniş kalıyor. */
+  .pd-table {
+    white-space: normal;
+    font-size: 12px;
+  }
+
+  .pd-table th,
+  .pd-table td {
+    padding: 5px 6px;
+  }
+
+  .pd-stats {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
 }
 
 .results-fields {

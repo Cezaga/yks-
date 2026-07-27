@@ -19,6 +19,21 @@ function txt(v: string | null | undefined): string {
   return v && v.trim() ? v : DASH
 }
 
+/**
+ * Programın bulunduğu yeri Google Haritalar'da açan bağlantı.
+ *
+ * Koordinat tutmuyoruz; arama metnini Haritalar'a bırakıyoruz. Fakülte adı
+ * varsa metne katılıyor — çok kampüslü üniversitelerde doğru yerleşkeye
+ * düşmeyi belirgin şekilde artırıyor. İl her hâlükârda ekleniyor ki aynı adı
+ * taşıyan başka bir kuruma gitmesin.
+ */
+function mapsUrl(row: ProgramRow): string {
+  const parts = [row.university, row.faculty, row.city].filter(
+    (p): p is string => Boolean(p && p.trim())
+  )
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(parts.join(' '))}`
+}
+
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="pd-stat">
@@ -214,6 +229,15 @@ export default function ProgramDetails({ row }: { row: ProgramRow }) {
 
       <section className="pd-block">
         <h4 className="pd-block-title">Program Bilgileri</h4>
+        <div className="pd-actions">
+          <a className="pd-link" href={mapsUrl(row)} target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10 18s6-5.2 6-9.4A6 6 0 0 0 4 8.6C4 12.8 10 18 10 18Z" />
+              <circle cx="10" cy="8.4" r="2.2" />
+            </svg>
+            Haritada aç
+          </a>
+        </div>
         <div className="pd-stats">
           <Stat label="Üniversite" value={row.university} />
           <Stat label="Fakülte / Yüksekokul" value={txt(row.faculty)} />

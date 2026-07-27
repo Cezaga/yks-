@@ -110,9 +110,9 @@ export default function DepartmentPicker({ index, selected, onAdd, onRemove, onA
       )}
 
       <div className="department-picker-chips">
-        {selected.length === 0 && <p className="department-picker-empty">Henüz bölüm seçmediniz.</p>}
+        {selected.length === 0 && <p className="app-empty">Henüz bölüm seçmediniz.</p>}
         {selected.map(d => (
-          <span key={d.slug} className="department-picker-chip">
+          <span key={d.slug} className="chip">
             {d.name}
             <button type="button" onClick={() => onRemove(d.slug)} aria-label={`${d.name} kaldır`}>
               ×

@@ -1,6 +1,12 @@
 .turkey-map-wrapper {
   position: relative;
   width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border-subtle);
 }
 
 .turkey-map-svg {
@@ -10,30 +16,38 @@
 }
 
 .turkey-map-path {
-  fill: var(--map-fill, #2a2f3a);
-  stroke: var(--map-stroke, #12151b);
+  fill: var(--map-fill);
+  stroke: var(--map-stroke);
   stroke-width: 0.6;
   cursor: pointer;
-  transition: fill 0.12s ease;
+  transition: fill var(--duration-fast) var(--ease);
 }
 
 .turkey-map-path:hover {
-  fill: var(--map-fill-hover, #4a5568);
+  fill: var(--map-fill-hover);
 }
 
 .turkey-map-path.is-selected {
-  fill: var(--map-fill-selected, #3b82f6);
+  fill: var(--brand);
+}
+
+/* Seçili ilin üstüne gelince marka renginin bir tonu: "seçili" bilgisini
+   kaybetmeden tıklanabilir olduğu belli olsun. */
+.turkey-map-path.is-selected:hover {
+  fill: var(--brand-hover);
 }
 
 .turkey-map-tooltip {
   position: absolute;
-  top: 8px;
-  left: 8px;
-  background: var(--panel-bg, #1a1d24);
-  color: var(--text, #f2f2f2);
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 13px;
+  top: var(--space-2);
+  left: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
   pointer-events: none;
-  border: 1px solid var(--border, #333);
 }

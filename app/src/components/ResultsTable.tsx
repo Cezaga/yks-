@@ -78,10 +78,14 @@ export default function ResultsTable({ departments, selectedCityNames, options }
   }, [filtered])
 
   if (departments.length === 0) {
-    return <p className="results-hint">Sonuçları görmek için sol taraftan il, sağ taraftan bölüm seçip "Onayla"ya basın.</p>
+    return (
+      <p className="results-hint">
+        Yukarıdan il ve bölüm seçip "Sıralamaları getir"e bas — sonuçlar burada listelenir.
+      </p>
+    )
   }
   if (filtered.length === 0) {
-    return <p className="results-hint">Seçilen kriterlere uyan sonuç bulunamadı.</p>
+    return <p className="results-hint">Seçilen filtrelere uyan sonuç yok. Filtreleri gevşetmeyi dene.</p>
   }
 
   // Known fields first (fixed order), then any unexpected codes.
@@ -98,6 +102,7 @@ export default function ResultsTable({ departments, selectedCityNames, options }
           <FieldSection
             key={code}
             label={label}
+            code={code}
             rows={byField.get(code) ?? []}
             range={ranges[code] ?? { min: '', max: '' }}
             onRangeChange={patch => patchRange(code, patch)}

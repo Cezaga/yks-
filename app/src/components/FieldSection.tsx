@@ -11,6 +11,7 @@ const COL_COUNT = 6
 
 interface FieldSectionProps {
   label: string
+  code: string // SAY / EA / SÖZ / DİL / TYT — bölümün aksan rengini seçer
   rows: ProgramRow[] // already filtered by city + funding, all same scoreType
   range: RankRange
   onRangeChange: (patch: Partial<RankRange>) => void
@@ -147,7 +148,15 @@ function Table({ rows, isOpen, onToggle }: TableProps) {
   )
 }
 
-export default function FieldSection({ label, rows, range, onRangeChange, sortDir, groupMode }: FieldSectionProps) {
+export default function FieldSection({
+  label,
+  code,
+  rows,
+  range,
+  onRangeChange,
+  sortDir,
+  groupMode
+}: FieldSectionProps) {
   const visible = useMemo(() => sortRows(applyRange(rows, range), sortDir), [rows, range, sortDir])
 
   // Birden fazla satır aynı anda açık kalabilir.
@@ -177,13 +186,15 @@ export default function FieldSection({ label, rows, range, onRangeChange, sortDi
   }, [visible, sortDir])
 
   return (
-    <section className="field-section">
+    <section className="field-section" data-field={code}>
       <header className="field-section-head">
         <h2>
-          {label} <span className="field-count">{visible.length} program</span>
+          <span className="field-badge">{code}</span>
+          {label.replace(/\s*\([^)]*\)\s*$/, '')}
+          <span className="field-count">{visible.length} program</span>
         </h2>
         <div className="rc-range">
-          <span className="field-range-label">Sıra aralığı:</span>
+          <span className="field-range-label">Sıra aralığı</span>
           <input
             type="number"
             inputMode="numeric"

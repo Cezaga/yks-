@@ -5,6 +5,7 @@ import DepartmentPicker from './components/DepartmentPicker'
 import ResultsTable from './components/ResultsTable'
 import ResultsControls, { type ResultsOptions } from './components/ResultsControls'
 import TercihListesi from './components/TercihListesi'
+import ThemeToggle from './components/ThemeToggle'
 import turkeyCities from './data/turkeyCities'
 import { loadDepartment, loadIndex } from './lib/dataLoader'
 import { readTercihlerFromUrl } from './lib/share'
@@ -100,72 +101,119 @@ function App() {
     }
   }
 
+  const hazir = selectedPlates.size > 0 && selectedDepts.length > 0
+
   return (
     <div className="app-shell">
-      <header className="app-header">
-        <h1>Türkiye Üniversite Bölüm Sıralamaları</h1>
-        <p>Haritadan il, sağdan bölüm seçip Onayla'ya basın.</p>
+      <header className="app-topbar">
+        <div className="app-topbar-inner">
+          <a className="app-brand" href="#">
+            <span className="app-brand-mark" aria-hidden="true">
+              YKS
+            </span>
+            <span className="app-brand-text">
+              <strong>Tercih Aracı</strong>
+              <span>Üniversite bölüm sıralamaları</span>
+            </span>
+          </a>
+          <ThemeToggle />
+        </div>
       </header>
 
-      {indexError && (
-        <div className="app-banner app-banner-error">
-          Bölüm listesi yüklenemedi: {indexError}. Scraper henüz çalıştırılmamış olabilir
-          (<code>scraper/run.js</code>).
+      <div className="app-body">
+        <div className="app-intro">
+          <h1>Nereye, hangi sırayla girebilirsin?</h1>
+          <p>
+            İl ve bölüm seç; 2025 başarı sıralamalarını yan yana gör, tercih listeni kur, bağlantıyla
+            arkadaşlarına gönder.
+          </p>
         </div>
-      )}
 
-      <main className="app-main">
-        <section className="app-panel">
-          <h2>İller</h2>
-          <CitySearch selectedPlates={selectedPlates} onToggle={togglePlate} />
-          <TurkeyMap selected={selectedPlates} onToggle={togglePlate} />
-          <div className="selected-cities">
-            {selectedCityNames.length === 0 && (
-              <p className="results-hint">Haritadan bir veya daha fazla il seçin.</p>
-            )}
-            {[...selectedPlates].map(plate => (
-              <span key={plate} className="department-picker-chip">
-                {cityByPlate.get(plate)}
-                <button type="button" onClick={() => togglePlate(plate)} aria-label="kaldır">
-                  ×
-                </button>
-              </span>
-            ))}
+        {indexError && (
+          <div className="app-banner app-banner-error">
+            Bölüm listesi yüklenemedi: {indexError}. Scraper henüz çalıştırılmamış olabilir
+            (<code>scraper/run.js</code>).
           </div>
-        </section>
-
-        <section className="app-panel">
-          <h2>Bölümler</h2>
-          <DepartmentPicker
-            index={index}
-            selected={selectedDepts}
-            onAdd={addDept}
-            onRemove={removeDept}
-            onAddPackage={addPackage}
-          />
-        </section>
-      </main>
-
-      <div className="app-confirm-row">
-        <button
-          type="button"
-          className="app-confirm-button"
-          disabled={selectedPlates.size === 0 || selectedDepts.length === 0 || loading}
-          onClick={handleConfirm}
-        >
-          {loading ? 'Yükleniyor...' : 'Onayla'}
-        </button>
-      </div>
-
-      {loadError && <div className="app-banner app-banner-error">{loadError}</div>}
-
-      <section className="app-results">
-        <TercihListesi />
-        {results.length > 0 && (
-          <ResultsControls options={options} onChange={patchOptions} />
         )}
-        <ResultsTable departments={results} selectedCityNames={selectedCityNames} options={options} />
-      </section>
+
+        <main className="app-main">
+          <section className="app-panel">
+            <header className="app-panel-head">
+              <span className="app-step" aria-hidden="true">
+                1
+              </span>
+              <div>
+                <h2>İl seç</h2>
+                <p>Haritadan tıkla ya da yazarak ara.</p>
+              </div>
+              {selectedPlates.size > 0 && <span className="app-panel-count">{selectedPlates.size} il</span>}
+            </header>
+            <CitySearch selectedPlates={selectedPlates} onToggle={togglePlate} />
+            <TurkeyMap selected={selectedPlates} onToggle={togglePlate} />
+            <div className="selected-cities">
+              {selectedCityNames.length === 0 && <p className="app-empty">Henüz il seçmediniz.</p>}
+              {[...selectedPlates].map(plate => (
+                <span key={plate} className="chip">
+                  {cityByPlate.get(plate)}
+                  <button type="button" onClick={() => togglePlate(plate)} aria-label="kaldır">
+                    ×
+                  </button>
+                </span>
+              ))}
+            </div>
+          </section>
+
+          <section className="app-panel">
+            <header className="app-panel-head">
+              <span className="app-step" aria-hidden="true">
+                2
+              </span>
+              <div>
+                <h2>Bölüm seç</h2>
+                <p>Hazır paketlerden birine bas ya da tek tek ara.</p>
+              </div>
+              {selectedDepts.length > 0 && (
+                <span className="app-panel-count">{selectedDepts.length} bölüm</span>
+              )}
+            </header>
+            <DepartmentPicker
+              index={index}
+              selected={selectedDepts}
+              onAdd={addDept}
+              onRemove={removeDept}
+              onAddPackage={addPackage}
+            />
+          </section>
+        </main>
+
+        <div className="app-confirm-row">
+          <button
+            type="button"
+            className="app-confirm-button"
+            disabled={!hazir || loading}
+            onClick={handleConfirm}
+          >
+            {loading ? 'Yükleniyor…' : 'Sıralamaları getir'}
+          </button>
+          {!hazir && !loading && (
+            <p className="app-confirm-hint">
+              {selectedPlates.size === 0 && selectedDepts.length === 0
+                ? 'Devam etmek için en az bir il ve bir bölüm seçin.'
+                : selectedPlates.size === 0
+                  ? 'Bir il seçmen kaldı.'
+                  : 'Bir bölüm seçmen kaldı.'}
+            </p>
+          )}
+        </div>
+
+        {loadError && <div className="app-banner app-banner-error">{loadError}</div>}
+
+        <section className="app-results">
+          <TercihListesi />
+          {results.length > 0 && <ResultsControls options={options} onChange={patchOptions} />}
+          <ResultsTable departments={results} selectedCityNames={selectedCityNames} options={options} />
+        </section>
+      </div>
     </div>
   )
 }

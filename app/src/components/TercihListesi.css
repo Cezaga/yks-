@@ -1,54 +1,85 @@
+/* ===========================================================================
+   Tercih listesi paneli — sitenin asıl çıktısı, o yüzden görsel olarak en
+   ayrıcalıklı kutu: marka renginde kenarlık ve hafif zemin.
+=========================================================================== */
+
 .tercih-panel {
-  margin: 0 0 24px;
-  padding: 16px;
-  border: 1px solid var(--map-fill-selected, #3b82f6);
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--map-fill-selected, #3b82f6) 8%, transparent);
+  padding: var(--space-5);
+  border: 1px solid var(--brand-soft-border);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  box-shadow: var(--shadow-sm);
 }
 
 .tercih-head {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--space-3);
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: var(--space-4);
 }
 
 .tercih-head h2 {
-  margin: 0;
-  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-lg);
+  letter-spacing: -0.015em;
 }
 
 .tercih-count {
-  font-size: 12.5px;
-  font-weight: 400;
-  opacity: 0.7;
-  margin-left: 6px;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--brand-soft);
+  border: 1px solid var(--brand-soft-border);
+  color: var(--brand-text);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
 }
 
 .tercih-actions {
   display: flex;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .tercih-actions button {
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border, #333);
-  background: var(--input-bg, #14161c);
-  color: var(--text, #f2f2f2);
-  font-size: 12.5px;
-  cursor: pointer;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-card);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  transition: color var(--duration-fast) var(--ease), border-color var(--duration-fast) var(--ease),
+    background var(--duration-fast) var(--ease);
 }
 
 .tercih-actions button:hover {
-  border-color: var(--map-fill-selected, #3b82f6);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+/* Paylaş, panelin birincil eylemi. */
+.tercih-actions button:first-child {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: var(--text-on-brand);
+  font-weight: var(--weight-semibold);
+}
+
+.tercih-actions button:first-child:hover {
+  background: var(--brand-hover);
+  border-color: var(--brand-hover);
+  color: var(--text-on-brand);
 }
 
 .tercih-actions .tercih-clear:hover {
-  border-color: #dc2626;
-  color: #f87171;
+  border-color: color-mix(in srgb, var(--danger) 50%, transparent);
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 8%, transparent);
 }
 
 .tercih-list {
@@ -57,18 +88,22 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  counter-reset: tercih;
+  gap: var(--space-2);
 }
 
 .tercih-list li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
-  border: 1px solid var(--border, #333);
-  border-radius: 8px;
-  background: var(--panel-bg, #1a1d24);
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--surface-card);
+  transition: border-color var(--duration-fast) var(--ease);
+}
+
+.tercih-list li:hover {
+  border-color: var(--border-strong);
 }
 
 .tercih-no {
@@ -78,139 +113,128 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
-  background: var(--map-fill-selected, #3b82f6);
-  color: #fff;
-  font-size: 12.5px;
-  font-weight: 700;
+  border-radius: var(--radius-sm);
+  background: var(--brand-soft);
+  border: 1px solid var(--brand-soft-border);
+  color: var(--brand-text);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
 }
 
 .tercih-bilgi {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
   min-width: 0;
   flex: 1 1 auto;
 }
 
 .tercih-bilgi strong {
-  font-size: 13.5px;
-  font-weight: 600;
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
   overflow-wrap: anywhere;
 }
 
 .tercih-alt {
-  font-size: 11.5px;
-  opacity: 0.7;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
   overflow-wrap: anywhere;
 }
 
 .tercih-kontrol {
   display: flex;
-  gap: 4px;
+  gap: var(--space-1);
   flex: 0 0 auto;
 }
 
 .tercih-kontrol button {
   width: 28px;
   height: 28px;
-  border-radius: 6px;
-  border: 1px solid var(--border, #333);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
   background: transparent;
-  color: var(--text, #f2f2f2);
-  cursor: pointer;
+  color: var(--text-muted);
   font-size: 14px;
   line-height: 1;
+  transition: color var(--duration-fast) var(--ease), background var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease);
 }
 
 .tercih-kontrol button:disabled {
-  opacity: 0.3;
+  opacity: 0.35;
   cursor: not-allowed;
 }
 
 .tercih-kontrol button:not(:disabled):hover {
-  border-color: var(--map-fill-selected, #3b82f6);
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+  background: var(--surface-hover);
+}
+
+.tercih-kontrol button:not(:disabled):last-child:hover {
+  color: var(--danger);
+  border-color: color-mix(in srgb, var(--danger) 40%, transparent);
+  background: color-mix(in srgb, var(--danger) 10%, transparent);
 }
 
 .tercih-not {
-  margin: 10px 0 0;
-  font-size: 11.5px;
-  opacity: 0.6;
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
 }
 
-/* Satırdaki ekle/çıkar düğmesi */
+.tercih-durum {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--green-500);
+}
+
+/* --- satırdaki ekle/çıkar düğmesi --------------------------------------- */
 .rt-fav-col {
-  width: 36px;
+  width: 40px;
   text-align: center !important;
 }
 
 .rt-fav {
-  width: 26px;
-  height: 26px;
-  border-radius: 6px;
-  border: 1px solid var(--border, #333);
-  background: transparent;
-  color: var(--text, #f2f2f2);
-  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-card);
+  color: var(--text-muted);
   font-size: 15px;
   line-height: 1;
-  opacity: 0.65;
+  transition: color var(--duration-fast) var(--ease), border-color var(--duration-fast) var(--ease),
+    background var(--duration-fast) var(--ease);
 }
 
 .rt-fav:hover {
-  opacity: 1;
-  border-color: var(--map-fill-selected, #3b82f6);
+  color: var(--brand-text);
+  border-color: var(--brand);
+  background: var(--brand-soft);
 }
 
 .rt-fav.is-ekli {
-  background: var(--map-fill-selected, #3b82f6);
-  border-color: var(--map-fill-selected, #3b82f6);
-  color: #fff;
-  opacity: 1;
-}
-
-/* Yazdırırken yalnızca tercih listesi çıksın. */
-@media print {
-  body * {
-    visibility: hidden;
-  }
-  #tercih-listesi,
-  #tercih-listesi * {
-    visibility: visible;
-  }
-  #tercih-listesi {
-    position: absolute;
-    inset: 0;
-    border: none;
-    background: none;
-  }
-  .tercih-actions,
-  .tercih-kontrol,
-  .tercih-not {
-    display: none !important;
-  }
-}
-
-.tercih-durum {
-  margin: 10px 0 0;
-  font-size: 12.5px;
-  color: var(--map-fill-selected, #3b82f6);
-  font-weight: 600;
+  background: var(--brand);
+  border-color: var(--brand);
+  color: var(--text-on-brand);
 }
 
 /* --- mobil -------------------------------------------------------------- */
 @media (max-width: 640px) {
   .tercih-panel {
-    padding: 12px 10px;
-    margin-bottom: 18px;
+    padding: var(--space-4) var(--space-3);
+    border-radius: var(--radius-md);
   }
 
   .tercih-head {
-    gap: 8px;
+    gap: var(--space-2);
   }
 
   .tercih-head h2 {
-    font-size: 16px;
+    font-size: var(--text-md);
   }
 
   /* Dört düğme 375px'te tek satıra sığmıyordu; eşit paylaşıp sarıyorlar. */
@@ -218,12 +242,12 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+    gap: var(--space-1);
   }
 
   .tercih-actions button {
-    padding: 9px 4px;
-    font-size: 12px;
+    padding: var(--space-2) var(--space-1);
+    font-size: var(--text-xs);
   }
 
   /* Sıra numarası + bilgi üstte, taşıma düğmeleri altta: uzun bölüm adları
@@ -235,8 +259,8 @@
       'no  bilgi'
       'no  kontrol';
     align-items: center;
-    row-gap: 6px;
-    padding: 9px 10px;
+    row-gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
   }
 
   .tercih-no {
@@ -252,12 +276,38 @@
   .tercih-kontrol {
     grid-area: kontrol;
     justify-content: flex-end;
-    gap: 8px;
+    gap: var(--space-2);
   }
 
   .tercih-kontrol button {
     width: 36px;
     height: 36px;
+    border-color: var(--border-subtle);
     font-size: 16px;
+  }
+}
+
+/* --- yazdırma: yalnızca tercih listesi çıksın ---------------------------- */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #tercih-listesi,
+  #tercih-listesi * {
+    visibility: visible;
+  }
+  #tercih-listesi {
+    position: absolute;
+    inset: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .tercih-actions,
+  .tercih-kontrol,
+  .tercih-not,
+  .tercih-durum {
+    display: none !important;
   }
 }

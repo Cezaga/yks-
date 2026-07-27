@@ -5,10 +5,28 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <!-- viewport-fit=cover: çentikli telefonlarda env(safe-area-inset-*) çalışsın -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101216" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#eef0f3" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101318" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f7f9" />
     <meta name="description" content="YKS tercih aracı: illere ve bölümlere göre 2025 başarı sıralamaları, kontenjan, ücret ve tercih listesi." />
     <title>YKS Tercih — Bölüm Sıralamaları</title>
+
+    <!-- Inter: arayüz fontu. latin-ext alt kümesi Türkçe harfleri kapsıyor;
+         yüklenene kadar system-ui ile gösterilir (swap), yazı kaybolmaz. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+
+    <script>
+      // Tema tercihini İLK boyamadan önce uygula. React'e bıraksaydık koyu tema
+      // bekleyen kişi bir kare beyaz ekran görürdü.
+      try {
+        var t = localStorage.getItem('yks.theme')
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t)
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

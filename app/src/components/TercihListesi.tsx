@@ -110,7 +110,7 @@ export default function TercihListesi() {
       {durum && <p className="tercih-durum">{durum}</p>}
       <p className="tercih-not">
         Liste tarayıcında saklanır; sayfayı kapatsan da durur. Sıralama, ÖSYM tercih formundaki
-        sıranı temsil eder. "Paylaş" bağlantısı listeni ve seçtiğin il/bölümleri içerir.
+        sıranı temsil eder. "Paylaş" listeni açan kısa bir bağlantı üretir.
       </p>
     </section>
   )

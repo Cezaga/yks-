@@ -87,6 +87,9 @@ function App() {
     })
   }
 
+  const selectAllDepts = () => setSelectedDepts(index.slice())
+  const clearDepts = () => setSelectedDepts([])
+
   const handleConfirm = async () => {
     if (selectedPlates.size === 0 || selectedDepts.length === 0) return
     setLoading(true)
@@ -193,6 +196,8 @@ function App() {
               onAdd={addDept}
               onRemove={removeDept}
               onAddPackage={addPackage}
+              onSelectAll={selectAllDepts}
+              onClearAll={clearDepts}
             />
           </section>
         </main>

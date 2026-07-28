@@ -15,9 +15,23 @@ interface DepartmentPickerProps {
   onAdd: (dept: DepartmentIndexEntry) => void
   onRemove: (slug: string) => void
   onAddPackage: (pkg: DepartmentPackage) => void
+  onSelectAll: () => void
+  onClearAll: () => void
 }
 
-export default function DepartmentPicker({ index, selected, onAdd, onRemove, onAddPackage }: DepartmentPickerProps) {
+// Bu sayının üstünde tek tek chip göstermek yerine özet gösteriyoruz
+// (653 chip listeyi kilitliyordu).
+const CHIP_LIMIT = 20
+
+export default function DepartmentPicker({
+  index,
+  selected,
+  onAdd,
+  onRemove,
+  onAddPackage,
+  onSelectAll,
+  onClearAll
+}: DepartmentPickerProps) {
   const [query, setQuery] = useState('')
   const selectedSlugs = useMemo(() => new Set(selected.map(d => d.slug)), [selected])
 
@@ -37,8 +51,27 @@ export default function DepartmentPicker({ index, selected, onAdd, onRemove, onA
     return PACKAGES.filter(p => cityKey(p.name).includes(q) || 'paket'.includes(q))
   }, [query])
 
+  const allSelected = index.length > 0 && selected.length >= index.length
+
   return (
     <div className="department-picker">
+      <div className="department-picker-selectall">
+        <button
+          type="button"
+          className={`department-picker-all-btn${allSelected ? ' is-active' : ''}`}
+          onClick={onSelectAll}
+          disabled={allSelected}
+          title="Tüm bölümleri birden seçer"
+        >
+          {allSelected ? `✓ Tüm bölümler seçili (${index.length})` : `Tüm bölümleri seç (${index.length})`}
+        </button>
+        {selected.length > 0 && (
+          <button type="button" className="department-picker-clear-btn" onClick={onClearAll}>
+            Seçimi temizle
+          </button>
+        )}
+      </div>
+
       <div className="department-picker-packages">
         {(['ozel', 'ayt', 'tyt'] as PackageCategory[]).map(cat => {
           const list = PACKAGES.filter(p => p.category === cat)
@@ -111,14 +144,21 @@ export default function DepartmentPicker({ index, selected, onAdd, onRemove, onA
 
       <div className="department-picker-chips">
         {selected.length === 0 && <p className="app-empty">Henüz bölüm seçmediniz.</p>}
-        {selected.map(d => (
-          <span key={d.slug} className="chip">
-            {d.name}
-            <button type="button" onClick={() => onRemove(d.slug)} aria-label={`${d.name} kaldır`}>
-              ×
-            </button>
-          </span>
-        ))}
+        {selected.length > CHIP_LIMIT ? (
+          <p className="department-picker-summary">
+            <strong>{selected.length}</strong> bölüm seçili. Tek tek yönetmek için "Seçimi temizle"yip
+            arayabilirsin.
+          </p>
+        ) : (
+          selected.map(d => (
+            <span key={d.slug} className="chip">
+              {d.name}
+              <button type="button" onClick={() => onRemove(d.slug)} aria-label={`${d.name} kaldır`}>
+                ×
+              </button>
+            </span>
+          ))
+        )}
       </div>
     </div>
   )

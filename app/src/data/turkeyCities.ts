@@ -409,6 +409,22 @@ const turkeyCities: TurkeyCityShape[] = [
     plate: '81',
     city: 'Düzce',
     draw: 'M294.325,81.136l-4.501,1.279h-0.062l-0.031,0.031l-6.312,0.372l-5.376,0.466l0.624,2.156 l0.031,0.125v0.125l-0.658,2.907l-0.031,0.156l-0.094,0.094l-3.158,3.279l-0.031,0.031l-0.031,0.031l-3.157,2.06l-1.314,3.28 l-0.003,5.094l2.406,0.532l0.281,0.062l0.094,0.281l0.998,3.532l0.062,0.25l-0.156,0.188l-2.221,3.03l1.812,0.22h0.062 l11.312-0.119h0.157l0.125,0.062l1.874,1.22h0.062l3.999,1.221l4.376-1.06l1.657-1.874l-0.122-4.875v-0.094l0.062-0.125 c0,0,0.235-0.5,0.501-1.062c0.265-0.562,0.57-1.275,0.595-1.375c0.079-0.316,0.235-0.493,0.438-0.812s0.44-0.68,0.689-1.031 c0.495-0.702,0.97-1.343,0.97-1.343l0.125-0.188l0.219-0.031l3.531-0.498v0.031l4.501-1.029l4.282-1.092l2.813-2.686l0.441-4.938 l-3.188-0.783h-0.062l-3.062-0.502h-0.031l-8.938-0.63h-0.125l-0.125-0.094l-2.905-2.002l-0.031-0.062l-0.062-0.031L294.325,81.136 z'
+  },
+  {
+    // KKTC — Anadolu'nun güneyine, Mersin/Antalya açıklarına yerleştirilmiş
+    // sadeleştirilmiş Kıbrıs adası. Karpaz yarımadası kuzeydoğuya (İskenderun
+    // körfezine) bakar. YÖKATLAS tüm KKTC üniversitelerine il="KIBRIS" verdiği
+    // için tek tıklanır bölge yeterli; şehir eşleşmesi cityKey ile 'KIBRIS' = 'Kıbrıs'.
+    plate: 'KKTC',
+    city: 'Kıbrıs',
+    draw: 'M400,423 L411,419 L424,417 L438,415 L451,413 L463,411 L474,408 L485,405 L498,400 L490,407 L480,411 L473,414 L481,417 L470,420 L456,423 L441,425 L425,426 L410,426 Z'
+  },
+  {
+    // Yurt dışı (gerçek yurt dışı kurumlar: Bosna, Kazakistan vb.). Haritada
+    // çizilmez (draw boş); haritanın yanındaki düğmeyle seçilir.
+    plate: 'YD',
+    city: 'Yurt Dışı',
+    draw: ''
   }
 ]
 

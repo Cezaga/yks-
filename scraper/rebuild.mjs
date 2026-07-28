@@ -138,7 +138,10 @@ function rebuildDept(grup, lvl, slug) {
     out.push({
       university: cleanUni(y.uni, y.il, y.uniTur),
       faculty: faculty(y.fak, y.il),
-      city: y.il || null,
+      // KKTC üniversitelerinde il="KIBRIS" gelir. Gerçek yurt dışı (Bosna,
+      // Kazakistan vb.) kurumlarda il boştur → haritanın yanındaki "Yurt Dışı"
+      // düğmesiyle seçilebilsinler diye tek bir sentinel şehir veriyoruz.
+      city: y.il || (/(YURTDISI|YURT DIŞI)/.test(y.uniTur || '') ? 'YURT DIŞI' : null),
       sector: sektor(y.uniTur),
       program: y.birim,
       programRaw: y.birim + ' (' + (y.sure || (lvl === 'ÖNLISANS' ? 2 : 4)) + ' Yıllık)',

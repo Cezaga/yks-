@@ -150,6 +150,17 @@ function App() {
             </header>
             <CitySearch selectedPlates={selectedPlates} onToggle={togglePlate} />
             <TurkeyMap selected={selectedPlates} onToggle={togglePlate} />
+            <div className="map-extra">
+              <span className="map-extra-hint">Kıbrıs haritada güneyde; yurt dışı için:</span>
+              <button
+                type="button"
+                className={`map-extra-btn${selectedPlates.has('YD') ? ' is-active' : ''}`}
+                onClick={() => togglePlate('YD')}
+                aria-pressed={selectedPlates.has('YD')}
+              >
+                🌍 Yurt dışı üniversiteler
+              </button>
+            </div>
             <div className="selected-cities">
               {selectedCityNames.length === 0 && <p className="app-empty">Henüz il seçmediniz.</p>}
               {[...selectedPlates].map(plate => (

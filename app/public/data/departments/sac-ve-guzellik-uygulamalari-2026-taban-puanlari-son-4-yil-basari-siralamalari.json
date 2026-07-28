@@ -1,1 +1,57 @@
-{"name":"Saç ve Güzellik Uygulamaları","slug":"sac-ve-guzellik-uygulamalari-2026-taban-puanlari-son-4-yil-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/sac-ve-guzellik-uygulamalari-2026-taban-puanlari-son-4-yil-basari-siralamalari/","rows":[{"university":"MARMARA ÜNİVERSİTESİ (İSTANBUL) (DEVLET) Uygulamalı Bilimler Fakültesi","faculty":null,"city":"İSTANBUL","sector":"DEVLET","program":"Saç ve Güzellik Uygulamaları","programRaw":"Saç ve Güzellik Uygulamaları","scoreType":"EA","years":[{"year":2025,"quota":"20","placed":"20","rank":"294.800","rankNumeric":294800,"score":"308,71318","scoreNumeric":308.71318},{"year":2024,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—-","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "Saç ve Güzellik Uygulamaları",
+  "slug": "sac-ve-guzellik-uygulamalari-2026-taban-puanlari-son-4-yil-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/sac-ve-guzellik-uygulamalari-2026-taban-puanlari-son-4-yil-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "MARMARA ÜNİVERSİTESİ",
+      "faculty": "Uygulamalı Bilimler Fakültesi",
+      "city": "İSTANBUL",
+      "sector": "Devlet",
+      "program": "Saç ve Güzellik Uygulamaları",
+      "programRaw": "Saç ve Güzellik Uygulamaları (4 Yıllık)",
+      "scoreType": "EA",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "20",
+          "placed": "20",
+          "rank": "294.840",
+          "rankNumeric": 294840,
+          "score": "308,71318",
+          "scoreNumeric": 308.71318
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—-",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

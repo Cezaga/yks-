@@ -1,1 +1,59 @@
-{"name":"Su Ürünleri Endüstrisi Mühendisliği","slug":"su-urunleri-endustrisi-muhendisligi-2025-taban-puanlari-son-4-yil-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/su-urunleri-endustrisi-muhendisligi-2025-taban-puanlari-son-4-yil-basari-siralamalari/","rows":[{"university":"ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ (DEVLET) Deniz Bilimleri ve Teknolojisi Fakültesi","faculty":null,"city":null,"sector":"DEVLET","program":"Su Ürünleri Endüstrisi Mühendisliği","programRaw":"Su Ürünleri Endüstrisi Mühendisliği","scoreType":"SAY","years":[{"year":2025,"quota":"30","placed":"31","rank":"591.700","rankNumeric":591700,"score":"250,55108","scoreNumeric":250.55108},{"year":2024,"quota":"30","placed":"31","rank":"603.115","rankNumeric":603115,"score":"242,38709","scoreNumeric":242.38709},{"year":2023,"quota":"–","placed":"–","rank":"–","rankNumeric":null,"score":"–","scoreNumeric":null},{"year":2022,"quota":"–","placed":"–","rank":"–","rankNumeric":null,"score":"–","scoreNumeric":null}]}],"warnings":["Hiçbir satırda il bilgisi yok"]}
+{
+  "name": "Su Ürünleri Endüstrisi Mühendisliği",
+  "slug": "su-urunleri-endustrisi-muhendisligi-2025-taban-puanlari-son-4-yil-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/su-urunleri-endustrisi-muhendisligi-2025-taban-puanlari-son-4-yil-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ",
+      "faculty": "Deniz Bilimleri Ve Teknolojisi Fakültesi",
+      "city": "ÇANAKKALE",
+      "sector": "Devlet",
+      "program": "Su Ürünleri Endüstrisi Mühendisliği",
+      "programRaw": "Su Ürünleri Endüstrisi Mühendisliği (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "30",
+          "placed": "31",
+          "rank": "591.777",
+          "rankNumeric": 591777,
+          "score": "250,55108",
+          "scoreNumeric": 250.55108
+        },
+        {
+          "year": 2024,
+          "quota": "30",
+          "placed": "31",
+          "rank": "603.115",
+          "rankNumeric": 603115,
+          "score": "242,38709",
+          "scoreNumeric": 242.38709
+        },
+        {
+          "year": 2023,
+          "quota": "–",
+          "placed": "–",
+          "rank": "–",
+          "rankNumeric": null,
+          "score": "–",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "–",
+          "placed": "–",
+          "rank": "–",
+          "rankNumeric": null,
+          "score": "–",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "Hiçbir satırda il bilgisi yok"
+  ]
+}

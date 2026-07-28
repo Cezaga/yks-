@@ -16,7 +16,8 @@ import fs from 'fs'
 const WRITE = process.argv.includes('--write')
 const ONLY = process.argv.find(a => a.startsWith('--only='))?.split('=')[1]
 const yok = JSON.parse(fs.readFileSync('yokatlas-2026.json', 'utf8'))
-const targets = JSON.parse(fs.readFileSync('targets46.json', 'utf8'))
+const TARGETS_FILE = process.argv.find(a => a.startsWith('--targets='))?.split('=')[1] || 'targets46.json'
+const targets = JSON.parse(fs.readFileSync(TARGETS_FILE, 'utf8'))
 const DEP = '../app/public/data/departments/'
 
 // --- normalize ---

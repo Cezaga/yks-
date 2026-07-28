@@ -1,1 +1,57 @@
-{"name":"Havacılık Elektroniği Teknolojileri","slug":"havacilik-elektronigi-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/havacilik-elektronigi-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari/","rows":[{"university":"ANKARA ÜNİVERSİTESİ","faculty":"Akyurt Meslek Yüksekokulu","city":"ANKARA","sector":"Devlet","program":"Havacılık Elektroniği Teknolojileri","programRaw":"Havacılık Elektroniği Teknolojileri (2 Yıllık)","scoreType":"TYT","years":[{"year":2025,"quota":"20","placed":"20","rank":"326.139","rankNumeric":326139,"score":"362,19869","scoreNumeric":362.19869},{"year":2024,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "Havacılık Elektroniği Teknolojileri",
+  "slug": "havacilik-elektronigi-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/havacilik-elektronigi-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "ANKARA ÜNİVERSİTESİ",
+      "faculty": "Akyurt Meslek Yüksekokulu",
+      "city": "ANKARA",
+      "sector": "Devlet",
+      "program": "Havacılık Elektroniği Teknolojileri",
+      "programRaw": "Havacılık Elektroniği Teknolojileri (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "20",
+          "placed": "20",
+          "rank": "326.280",
+          "rankNumeric": 326280,
+          "score": "362,17287",
+          "scoreNumeric": 362.17287
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

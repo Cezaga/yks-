@@ -1,1 +1,211 @@
-{"name":"Tarım Makineleri ve Teknolojileri","slug":"tarim-makineleri-ve-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/tarim-makineleri-ve-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari/","rows":[{"university":"AKDENİZ ÜNİVERSİTESİ","faculty":"Elmalı Meslek Yüksekokulu","city":"ANTALYA","sector":"Devlet","program":"Tarım Makineleri ve Teknolojileri","programRaw":"Tarım Makineleri ve Teknolojileri (2 Yıllık)","scoreType":"TYT","years":[{"year":2025,"quota":"35","placed":"36","rank":"1.579.330","rankNumeric":1579330,"score":"247,5071","scoreNumeric":247.5071},{"year":2024,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"KARAMANOĞLU MEHMETBEY ÜNİVERSİTESİ","faculty":"Teknik Bilimler Meslek Yüksekokulu","city":"KARAMAN","sector":"Devlet","program":"Tarım Makineleri ve Teknolojileri","programRaw":"Tarım Makineleri ve Teknolojileri (2 Yıllık)","scoreType":"TYT","years":[{"year":2025,"quota":"30","placed":"31","rank":"1.739.691","rankNumeric":1739691,"score":"236,58155","scoreNumeric":236.58155},{"year":2024,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"AFYON KOCATEPE ÜNİVERSİTESİ","faculty":"Sandıklı Meslek Yüksekokulu","city":"AFYONKARAHİSAR","sector":"Devlet","program":"Tarım Makineleri ve Teknolojileri","programRaw":"Tarım Makineleri ve Teknolojileri (2 Yıllık)","scoreType":"TYT","years":[{"year":2025,"quota":"30","placed":"31","rank":"1.775.971","rankNumeric":1775971,"score":"234,08618","scoreNumeric":234.08618},{"year":2024,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "Tarım Makineleri ve Teknolojileri",
+  "slug": "tarim-makineleri-ve-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/tarim-makineleri-ve-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "AKDENİZ ÜNİVERSİTESİ",
+      "faculty": "Elmalı Meslek Yüksekokulu",
+      "city": "ANTALYA",
+      "sector": "Devlet",
+      "program": "Tarım Makineleri ve Teknolojileri",
+      "programRaw": "Tarım Makineleri ve Teknolojileri (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "35",
+          "placed": "36",
+          "rank": "1.579.330",
+          "rankNumeric": 1579330,
+          "score": "247,50710",
+          "scoreNumeric": 247.5071
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "KARAMANOĞLU MEHMETBEY ÜNİVERSİTESİ",
+      "faculty": "Teknik Bilimler Meslek Yüksekokulu",
+      "city": "KARAMAN",
+      "sector": "Devlet",
+      "program": "Tarım Makineleri ve Teknolojileri",
+      "programRaw": "Tarım Makineleri ve Teknolojileri (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "30",
+          "placed": "31",
+          "rank": "1.739.691",
+          "rankNumeric": 1739691,
+          "score": "236,58155",
+          "scoreNumeric": 236.58155
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "AFYON KOCATEPE ÜNİVERSİTESİ",
+      "faculty": "Sandıklı Meslek Yüksekokulu",
+      "city": "AFYONKARAHİSAR",
+      "sector": "Devlet",
+      "program": "Tarım Makineleri ve Teknolojileri",
+      "programRaw": "Tarım Makineleri ve Teknolojileri (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "30",
+          "placed": "31",
+          "rank": "1.781.212",
+          "rankNumeric": 1781212,
+          "score": "233,72767",
+          "scoreNumeric": 233.72767
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "AYDIN ADNAN MENDERES ÜNİVERSİTESİ",
+      "faculty": "Koçarlı Meslek Yüksekokulu",
+      "city": "AYDIN",
+      "sector": "Devlet",
+      "program": "Tarım Makineleri ve Teknolojileri",
+      "programRaw": "Tarım Makineleri ve Teknolojileri (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": null,
+          "placed": null,
+          "rank": null,
+          "rankNumeric": null,
+          "score": null,
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "DOKUZ EYLÜL ÜNİVERSİTESİ",
+      "faculty": "Kiraz Meslek Yüksekokulu",
+      "city": "İZMİR",
+      "sector": "Devlet",
+      "program": "Tarım Makineleri ve Teknolojileri",
+      "programRaw": "Tarım Makineleri ve Teknolojileri (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": null,
+          "placed": null,
+          "rank": null,
+          "rankNumeric": null,
+          "score": null,
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "KAYSERİ ÜNİVERSİTESİ",
+      "faculty": "Develi Hüseyin Şahin Meslek Yüksekokulu",
+      "city": "KAYSERİ",
+      "sector": "Devlet",
+      "program": "Tarım Makineleri ve Teknolojileri",
+      "programRaw": "Tarım Makineleri ve Teknolojileri (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": null,
+          "placed": null,
+          "rank": null,
+          "rankNumeric": null,
+          "score": null,
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

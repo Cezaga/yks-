@@ -1,1 +1,265 @@
-{"name":"İklim Bilimi ve Meteoroloji Mühendisliği","slug":"iklim-bilimi-ve-meteoroloji-muhendisligi-2025-taban-puanlari-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/iklim-bilimi-ve-meteoroloji-muhendisligi-2025-taban-puanlari-basari-siralamalari/","rows":[{"university":"İSTANBUL TEKNİK ÜNİVERSİTESİ","faculty":"Uçak ve Uzay Bilimleri Fakültesi","city":"İSTANBUL","sector":"Devlet","program":"İklim Bilimi ve Meteoroloji Mühendisliği","programRaw":"İklim Bilimi ve Meteoroloji Mühendisliği (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"45","placed":"47","rank":"56.627","rankNumeric":56627,"score":"438,78269","scoreNumeric":438.78269},{"year":2024,"quota":"45","placed":"47","rank":"64.918","rankNumeric":64918,"score":"417,86283","scoreNumeric":417.86283},{"year":2023,"quota":"50","placed":"52","rank":"74.276","rankNumeric":74276,"score":"432,85539","scoreNumeric":432.85539},{"year":2022,"quota":"70","placed":"72","rank":"86.223","rankNumeric":86223,"score":"418,51153","scoreNumeric":418.51153}]},{"university":"SAMSUN ÜNİVERSİTESİ","faculty":"Özdemir Bayraktar Havacılık ve Uzay Bilimleri Fakültesi","city":"SAMSUN","sector":"Devlet","program":"İklim Bilimi ve Meteoroloji Mühendisliği","programRaw":"İklim Bilimi ve Meteoroloji Mühendisliği (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"50","placed":"52","rank":"167.278","rankNumeric":167278,"score":"353,69574","scoreNumeric":353.69574},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"ADANA ALPARSLAN TÜRKEŞ BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ","faculty":"Havacılık ve Uzay Bilimleri Fakültesi","city":"ADANA","sector":"Devlet","program":"İklim Bilimi ve Meteoroloji Mühendisliği (İngilizce)","programRaw":"İklim Bilimi ve Meteoroloji Mühendisliği (İngilizce) (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"30","placed":"34","rank":"271.888","rankNumeric":271888,"score":"310,7577","scoreNumeric":310.7577},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"İSTANBUL TEKNİK ÜNİVERSİTESİ","faculty":"Uçak ve Uzay Bilimleri Fakültesi","city":"İSTANBUL","sector":"Devlet","program":"İklim Bilimi ve Meteoroloji Mühendisliği (KKTC Uyruklu)","programRaw":"İklim Bilimi ve Meteoroloji Mühendisliği (KKTC Uyruklu) (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"2","placed":"—","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"SAMSUN ÜNİVERSİTESİ","faculty":"Özdemir Bayraktar Havacılık ve Uzay Bilimleri Fakültesi","city":"SAMSUN","sector":"Devlet","program":"İklim Bilimi ve Meteoroloji Mühendisliği (KKTC Uyruklu)","programRaw":"İklim Bilimi ve Meteoroloji Mühendisliği (KKTC Uyruklu) (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"3","placed":"—","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "İklim Bilimi ve Meteoroloji Mühendisliği",
+  "slug": "iklim-bilimi-ve-meteoroloji-muhendisligi-2025-taban-puanlari-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/iklim-bilimi-ve-meteoroloji-muhendisligi-2025-taban-puanlari-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "İSTANBUL TEKNİK ÜNİVERSİTESİ",
+      "faculty": "Uçak Ve Uzay Bilimleri Fakültesi",
+      "city": "İSTANBUL",
+      "sector": "Devlet",
+      "program": "İklim Bilimi ve Meteoroloji Mühendisliği",
+      "programRaw": "İklim Bilimi ve Meteoroloji Mühendisliği (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "45",
+          "placed": "47",
+          "rank": "56.627",
+          "rankNumeric": 56627,
+          "score": "438,78269",
+          "scoreNumeric": 438.78269
+        },
+        {
+          "year": 2024,
+          "quota": "45",
+          "placed": "47",
+          "rank": "64.918",
+          "rankNumeric": 64918,
+          "score": "417,86283",
+          "scoreNumeric": 417.86283
+        },
+        {
+          "year": 2023,
+          "quota": "50",
+          "placed": "52",
+          "rank": "74.276",
+          "rankNumeric": 74276,
+          "score": "432,85539",
+          "scoreNumeric": 432.85539
+        },
+        {
+          "year": 2022,
+          "quota": "70",
+          "placed": "72",
+          "rank": "86.223",
+          "rankNumeric": 86223,
+          "score": "418,51153",
+          "scoreNumeric": 418.51153
+        }
+      ]
+    },
+    {
+      "university": "SAMSUN ÜNİVERSİTESİ",
+      "faculty": "Özdemir Bayraktar Havacılık Ve Uzay Bilimleri Fakültesi",
+      "city": "SAMSUN",
+      "sector": "Devlet",
+      "program": "İklim Bilimi ve Meteoroloji Mühendisliği",
+      "programRaw": "İklim Bilimi ve Meteoroloji Mühendisliği (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "50",
+          "placed": "52",
+          "rank": "167.278",
+          "rankNumeric": 167278,
+          "score": "353,69574",
+          "scoreNumeric": 353.69574
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "ADANA ALPARSLAN TÜRKEŞ BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ",
+      "faculty": "Havacılık Ve Uzay Bilimleri Fakültesi",
+      "city": "ADANA",
+      "sector": "Devlet",
+      "program": "İklim Bilimi ve Meteoroloji Mühendisliği (İngilizce)",
+      "programRaw": "İklim Bilimi ve Meteoroloji Mühendisliği (İngilizce) (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "30",
+          "placed": "34",
+          "rank": "271.888",
+          "rankNumeric": 271888,
+          "score": "310,75770",
+          "scoreNumeric": 310.7577
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "ADANA ALPARSLAN TÜRKEŞ BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ",
+      "faculty": "Havacılık Ve Uzay Bilimleri Fakültesi",
+      "city": "ADANA",
+      "sector": "Devlet",
+      "program": "İklim Bilimi ve Meteoroloji Mühendisliği (İngilizce) (KKTC Uyruklu)",
+      "programRaw": "İklim Bilimi ve Meteoroloji Mühendisliği (İngilizce) (KKTC Uyruklu) (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": null,
+          "placed": null,
+          "rank": null,
+          "rankNumeric": null,
+          "score": null,
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "İSTANBUL TEKNİK ÜNİVERSİTESİ",
+      "faculty": "Uçak Ve Uzay Bilimleri Fakültesi",
+      "city": "İSTANBUL",
+      "sector": "Devlet",
+      "program": "İklim Bilimi ve Meteoroloji Mühendisliği (KKTC Uyruklu)",
+      "programRaw": "İklim Bilimi ve Meteoroloji Mühendisliği (KKTC Uyruklu) (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "2",
+          "placed": "—",
+          "rank": "Dolmadı",
+          "rankNumeric": null,
+          "score": "Dolmadı",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "SAMSUN ÜNİVERSİTESİ",
+      "faculty": "Özdemir Bayraktar Havacılık Ve Uzay Bilimleri Fakültesi",
+      "city": "SAMSUN",
+      "sector": "Devlet",
+      "program": "İklim Bilimi ve Meteoroloji Mühendisliği (KKTC Uyruklu)",
+      "programRaw": "İklim Bilimi ve Meteoroloji Mühendisliği (KKTC Uyruklu) (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "3",
+          "placed": "—",
+          "rank": "Dolmadı",
+          "rankNumeric": null,
+          "score": "Dolmadı",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

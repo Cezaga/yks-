@@ -1,1 +1,106 @@
-{"name":"Bilgisayar Bilimleri ve Mühendisliği","slug":"bilgisayar-bilimleri-ve-muhendisligi-2025-taban-puanlari-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/bilgisayar-bilimleri-ve-muhendisligi-2025-taban-puanlari-basari-siralamalari/","rows":[{"university":"ULUSLARARASI SARAYBOSNA ÜNİVERSİTESİ","faculty":"Mühendislik ve Doğa Bilimleri Fakültesi (BOSNA-HERSEK) (Yurt Dışı )","city":null,"sector":null,"program":"Bilgisayar Bilimleri ve Mühendisliği (Burslu)","programRaw":"Bilgisayar Bilimleri ve Mühendisliği (Burslu) (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"1","placed":"1","rank":"123.206","rankNumeric":123206,"score":"381,28778","scoreNumeric":381.28778},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"ULUSLARARASI SARAYBOSNA ÜNİVERSİTESİ","faculty":"Mühendislik ve Doğa Bilimleri Fakültesi (SARAYBOSNA – BOSNA – HERSEK) (Yurt Dışı )","city":null,"sector":null,"program":"Bilgisayar Bilimleri ve Mühendisliği (%50 İndirimli)","programRaw":"Bilgisayar Bilimleri ve Mühendisliği (%50 İndirimli) (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"10","placed":"6","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2024,"quota":"5","placed":"2","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"ULUSLARARASI SARAYBOSNA ÜNİVERSİTESİ","faculty":"Mühendislik ve Doğa Bilimleri Fakültesi (SARAYBOSNA – BOSNA – HERSEK) (Yurt Dışı )","city":null,"sector":null,"program":"Bilgisayar Bilimleri ve Mühendisliği (%25 İndirimli)","programRaw":"Bilgisayar Bilimleri ve Mühendisliği (%25 İndirimli) (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"10","placed":"—","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2024,"quota":"5","placed":"—","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":["Hiçbir satırda il bilgisi yok"]}
+{
+  "name": "Bilgisayar Bilimleri ve Mühendisliği",
+  "slug": "bilgisayar-bilimleri-ve-muhendisligi-2025-taban-puanlari-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/bilgisayar-bilimleri-ve-muhendisligi-2025-taban-puanlari-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "ULUSLARARASI SARAYBOSNA ÜNİVERSİTESİ",
+      "faculty": "Mühendislik Ve Doğa Bilimleri Fakültesi",
+      "city": null,
+      "sector": "Devlet",
+      "program": "Bilgisayar Bilimleri ve Mühendisliği (Burslu)",
+      "programRaw": "Bilgisayar Bilimleri ve Mühendisliği (Burslu) (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "1",
+          "placed": "1",
+          "rank": "123.206",
+          "rankNumeric": 123206,
+          "score": "381,28778",
+          "scoreNumeric": 381.28778
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "ULUSLARARASI SARAYBOSNA ÜNİVERSİTESİ",
+      "faculty": "Mühendislik Ve Doğa Bilimleri Fakültesi",
+      "city": null,
+      "sector": "Devlet",
+      "program": "Bilgisayar Bilimleri ve Mühendisliği (%50 İndirimli)",
+      "programRaw": "Bilgisayar Bilimleri ve Mühendisliği (%50 İndirimli) (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "10",
+          "placed": "6",
+          "rank": "Dolmadı",
+          "rankNumeric": null,
+          "score": "Dolmadı",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2024,
+          "quota": "5",
+          "placed": "2",
+          "rank": "Dolmadı",
+          "rankNumeric": null,
+          "score": "Dolmadı",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "Hiçbir satırda il bilgisi yok"
+  ]
+}

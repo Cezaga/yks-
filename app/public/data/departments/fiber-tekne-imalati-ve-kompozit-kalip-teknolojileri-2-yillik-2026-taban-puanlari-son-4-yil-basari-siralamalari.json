@@ -1,1 +1,57 @@
-{"name":"Fiber Tekne İmalatı ve Kompozit Kalıp Teknolojileri","slug":"fiber-tekne-imalati-ve-kompozit-kalip-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/fiber-tekne-imalati-ve-kompozit-kalip-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari/","rows":[{"university":"YALOVA ÜNİVERSİTESİ","faculty":"Çınarcık Meslek Yüksekokulu","city":"YALOVA","sector":"Devlet","program":"Fiber Tekne İmalatı ve Kompozit Kalıp Teknolojileri","programRaw":"Fiber Tekne İmalatı ve Kompozit Kalıp Teknolojileri (2 Yıllık)","scoreType":"TYT","years":[{"year":2025,"quota":"30","placed":"31","rank":"1.402.850","rankNumeric":1402850,"score":"259,55258","scoreNumeric":259.55258},{"year":2024,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "Fiber Tekne İmalatı ve Kompozit Kalıp Teknolojileri",
+  "slug": "fiber-tekne-imalati-ve-kompozit-kalip-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/fiber-tekne-imalati-ve-kompozit-kalip-teknolojileri-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "YALOVA ÜNİVERSİTESİ",
+      "faculty": "Çınarcık Meslek Yüksekokulu",
+      "city": "YALOVA",
+      "sector": "Devlet",
+      "program": "Fiber Tekne İmalatı ve Kompozit Kalıp Teknolojileri",
+      "programRaw": "Fiber Tekne İmalatı ve Kompozit Kalıp Teknolojileri (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "30",
+          "placed": "31",
+          "rank": "1.402.850",
+          "rankNumeric": 1402850,
+          "score": "259,55258",
+          "scoreNumeric": 259.55258
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

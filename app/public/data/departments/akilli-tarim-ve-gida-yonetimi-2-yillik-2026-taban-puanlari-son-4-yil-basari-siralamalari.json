@@ -1,1 +1,77 @@
-{"name":"Akıllı Tarım ve Gıda Yönetimi","slug":"akilli-tarim-ve-gida-yonetimi-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/akilli-tarim-ve-gida-yonetimi-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari/","rows":[{"university":"ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ","faculty":"Lapseki Meslek Yüksekokulu","city":"ÇANAKKALE","sector":"Devlet","program":"Akıllı Tarım ve Gıda Yönetimi","programRaw":"Akıllı Tarım ve Gıda Yönetimi (2 Yıllık)","scoreType":"TYT","years":[{"year":2025,"quota":"30","placed":"31","rank":"1.497.057","rankNumeric":1497057,"score":"253,12894","scoreNumeric":253.12894},{"year":2024,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "Akıllı Tarım ve Gıda Yönetimi",
+  "slug": "akilli-tarim-ve-gida-yonetimi-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/akilli-tarim-ve-gida-yonetimi-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ",
+      "faculty": "Lapseki Meslek Yüksekokulu",
+      "city": "ÇANAKKALE",
+      "sector": "Devlet",
+      "program": "Akıllı Tarım ve Gıda Yönetimi",
+      "programRaw": "Akıllı Tarım ve Gıda Yönetimi (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "30",
+          "placed": "31",
+          "rank": "1.497.057",
+          "rankNumeric": 1497057,
+          "score": "253,12894",
+          "scoreNumeric": 253.12894
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "AĞRI İBRAHİM ÇEÇEN ÜNİVERSİTESİ",
+      "faculty": "Meslek Yüksekokulu",
+      "city": "AĞRI",
+      "sector": "Devlet",
+      "program": "Akıllı Tarım ve Gıda Yönetimi",
+      "programRaw": "Akıllı Tarım ve Gıda Yönetimi (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": null,
+          "placed": null,
+          "rank": null,
+          "rankNumeric": null,
+          "score": null,
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

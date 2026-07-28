@@ -1,1 +1,57 @@
-{"name":"Abaza Dili ve Edebiyatı","slug":"abaza-dili-ve-edebiyati-2025-taban-puanlari-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/abaza-dili-ve-edebiyati-2025-taban-puanlari-basari-siralamalari/","rows":[{"university":"DÜZCE ÜNİVERSİTESİ","faculty":"Fen-Edebiyat Fakültesi","city":"DÜZCE","sector":"Devlet","program":"Abaza Dili ve Edebiyatı","programRaw":"Abaza Dili ve Edebiyatı (4 Yıllık)","scoreType":"SÖZ","years":[{"year":2025,"quota":"20","placed":"22","rank":"986.841","rankNumeric":986841,"score":"213,28355","scoreNumeric":213.28355},{"year":2024,"quota":"20","placed":"22","rank":"724.933","rankNumeric":724933,"score":"262,81795","scoreNumeric":262.81795},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "Abaza Dili ve Edebiyatı",
+  "slug": "abaza-dili-ve-edebiyati-2025-taban-puanlari-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/abaza-dili-ve-edebiyati-2025-taban-puanlari-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "DÜZCE ÜNİVERSİTESİ",
+      "faculty": "Fen-Edebiyat Fakültesi",
+      "city": "DÜZCE",
+      "sector": "Devlet",
+      "program": "Abaza Dili ve Edebiyatı",
+      "programRaw": "Abaza Dili ve Edebiyatı (4 Yıllık)",
+      "scoreType": "SÖZ",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "20",
+          "placed": "22",
+          "rank": "986.841",
+          "rankNumeric": 986841,
+          "score": "213,28355",
+          "scoreNumeric": 213.28355
+        },
+        {
+          "year": 2024,
+          "quota": "20",
+          "placed": "22",
+          "rank": "724.933",
+          "rankNumeric": 724933,
+          "score": "262,81795",
+          "scoreNumeric": 262.81795
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

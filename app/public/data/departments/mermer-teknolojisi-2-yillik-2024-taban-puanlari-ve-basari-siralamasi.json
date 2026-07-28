@@ -1,1 +1,104 @@
-{"name":"Mermer Teknolojisi","slug":"mermer-teknolojisi-2-yillik-2024-taban-puanlari-ve-basari-siralamasi","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/mermer-teknolojisi-2-yillik-2024-taban-puanlari-ve-basari-siralamasi/","rows":[{"university":"AFYON KOCATEPE ÜNİVERSİTESİ (AFYONKARAHİSAR) (DEVLET) Afyon Meslek Yüksekokulu","faculty":null,"city":"AFYONKARAHİSAR","sector":"DEVLET","program":"Mermer Teknolojisi","programRaw":"Mermer Teknolojisi","scoreType":"TYT","years":[{"year":2025,"quota":"20","placed":"21","rank":"1.522.000","rankNumeric":1522000,"score":"251,38205","scoreNumeric":251.38205},{"year":2024,"quota":"20","placed":"21","rank":"1.762.691","rankNumeric":1762691,"score":"243,73777","scoreNumeric":243.73777},{"year":2023,"quota":"20","placed":"21","rank":"1.927.918","rankNumeric":1927918,"score":"232,65190","scoreNumeric":232.6519},{"year":2022,"quota":"20","placed":"21","rank":"1.731.102","rankNumeric":1731102,"score":"238,75750","scoreNumeric":238.7575}]},{"university":"AFYON KOCATEPE ÜNİVERSİTESİ (AFYONKARAHİSAR) (DEVLET) İscehisar Meslek Yüksekokulu","faculty":null,"city":"AFYONKARAHİSAR","sector":"DEVLET","program":"Mermer Teknolojisi","programRaw":"Mermer Teknolojisi","scoreType":"TYT","years":[{"year":2025,"quota":"20","placed":"21","rank":"1.747.000","rankNumeric":1747000,"score":"236,0698","scoreNumeric":236.0698},{"year":2024,"quota":"20","placed":"21","rank":"1.918.813","rankNumeric":1918813,"score":"235,05209","scoreNumeric":235.05209},{"year":2023,"quota":"20","placed":"21","rank":"1.925.355","rankNumeric":1925355,"score":"232,78157","scoreNumeric":232.78157},{"year":2022,"quota":"20","placed":"21","rank":"2.577.640","rankNumeric":2577640,"score":"202,86762","scoreNumeric":202.86762}]}],"warnings":[]}
+{
+  "name": "Mermer Teknolojisi",
+  "slug": "mermer-teknolojisi-2-yillik-2024-taban-puanlari-ve-basari-siralamasi",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/mermer-teknolojisi-2-yillik-2024-taban-puanlari-ve-basari-siralamasi/",
+  "rows": [
+    {
+      "university": "AFYON KOCATEPE ÜNİVERSİTESİ",
+      "faculty": "Afyon Meslek Yüksekokulu",
+      "city": "AFYONKARAHİSAR",
+      "sector": "Devlet",
+      "program": "Mermer Teknolojisi",
+      "programRaw": "Mermer Teknolojisi (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "20",
+          "placed": "21",
+          "rank": "1.522.458",
+          "rankNumeric": 1522458,
+          "score": "251,38205",
+          "scoreNumeric": 251.38205
+        },
+        {
+          "year": 2024,
+          "quota": "20",
+          "placed": "21",
+          "rank": "1.762.691",
+          "rankNumeric": 1762691,
+          "score": "243,73777",
+          "scoreNumeric": 243.73777
+        },
+        {
+          "year": 2023,
+          "quota": "20",
+          "placed": "21",
+          "rank": "1.927.918",
+          "rankNumeric": 1927918,
+          "score": "232,65190",
+          "scoreNumeric": 232.6519
+        },
+        {
+          "year": 2022,
+          "quota": "20",
+          "placed": "21",
+          "rank": "1.731.102",
+          "rankNumeric": 1731102,
+          "score": "238,75750",
+          "scoreNumeric": 238.7575
+        }
+      ]
+    },
+    {
+      "university": "AFYON KOCATEPE ÜNİVERSİTESİ",
+      "faculty": "İscehisar Meslek Yüksekokulu",
+      "city": "AFYONKARAHİSAR",
+      "sector": "Devlet",
+      "program": "Mermer Teknolojisi",
+      "programRaw": "Mermer Teknolojisi (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "20",
+          "placed": "21",
+          "rank": "1.747.224",
+          "rankNumeric": 1747224,
+          "score": "236,06980",
+          "scoreNumeric": 236.0698
+        },
+        {
+          "year": 2024,
+          "quota": "20",
+          "placed": "21",
+          "rank": "1.918.813",
+          "rankNumeric": 1918813,
+          "score": "235,05209",
+          "scoreNumeric": 235.05209
+        },
+        {
+          "year": 2023,
+          "quota": "20",
+          "placed": "21",
+          "rank": "1.925.355",
+          "rankNumeric": 1925355,
+          "score": "232,78157",
+          "scoreNumeric": 232.78157
+        },
+        {
+          "year": 2022,
+          "quota": "20",
+          "placed": "21",
+          "rank": "2.577.640",
+          "rankNumeric": 2577640,
+          "score": "202,86762",
+          "scoreNumeric": 202.86762
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

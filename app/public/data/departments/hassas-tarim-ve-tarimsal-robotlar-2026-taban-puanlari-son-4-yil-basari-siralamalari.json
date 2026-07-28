@@ -1,1 +1,198 @@
-{"name":"Hassas Tarım ve Tarımsal Robotlar","slug":"hassas-tarim-ve-tarimsal-robotlar-2026-taban-puanlari-son-4-yil-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/hassas-tarim-ve-tarimsal-robotlar-2026-taban-puanlari-son-4-yil-basari-siralamalari/","rows":[{"university":"ONDOKUZ MAYIS ÜNİVERSİTESİ","faculty":"Ziraat Fakültesi","city":"SAMSUN","sector":"Devlet","program":"Hassas Tarım ve Tarımsal Robotlar","programRaw":"Hassas Tarım ve Tarımsal Robotlar (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"40","placed":"42","rank":"457.980","rankNumeric":457980,"score":"268,67767","scoreNumeric":268.67767},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"NİĞDE ÖMER HALİSDEMİR ÜNİVERSİTESİ","faculty":"Tarım Bilimleri ve Teknolojileri Fakültesi","city":"NİĞDE","sector":"Devlet","program":"Hassas Tarım ve Tarımsal Robotlar (İngilizce)","programRaw":"Hassas Tarım ve Tarımsal Robotlar (İngilizce) (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"30","placed":"31","rank":"544.632","rankNumeric":544632,"score":"256,17914","scoreNumeric":256.17914},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"SİVAS BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ","faculty":"Tarım Bilimleri ve Teknoloji Fakültesi","city":"SİVAS","sector":"Devlet","program":"Hassas Tarım ve Tarımsal Robotlar","programRaw":"Hassas Tarım ve Tarımsal Robotlar (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"20","placed":"22","rank":"563.871","rankNumeric":563871,"score":"253,81569","scoreNumeric":253.81569},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"BURDUR MEHMET AKİF ERSOY ÜNİVERSİTESİ","faculty":"Fen-Edebiyat Fakültesi","city":"BURDUR","sector":"Devlet","program":"Hassas Tarım ve Tarımsal Robotlar","programRaw":"Hassas Tarım ve Tarımsal Robotlar (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"30","placed":"32","rank":"616.357","rankNumeric":616357,"score":"247,83737","scoreNumeric":247.83737},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "Hassas Tarım ve Tarımsal Robotlar",
+  "slug": "hassas-tarim-ve-tarimsal-robotlar-2026-taban-puanlari-son-4-yil-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/hassas-tarim-ve-tarimsal-robotlar-2026-taban-puanlari-son-4-yil-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "ONDOKUZ MAYIS ÜNİVERSİTESİ",
+      "faculty": "Ziraat Fakültesi",
+      "city": "SAMSUN",
+      "sector": "Devlet",
+      "program": "Hassas Tarım ve Tarımsal Robotlar",
+      "programRaw": "Hassas Tarım ve Tarımsal Robotlar (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "40",
+          "placed": "42",
+          "rank": "457.980",
+          "rankNumeric": 457980,
+          "score": "268,67767",
+          "scoreNumeric": 268.67767
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "NİĞDE ÖMER HALİSDEMİR ÜNİVERSİTESİ",
+      "faculty": "Tarım Bilimleri Ve Teknolojileri Fakültesi",
+      "city": "NİĞDE",
+      "sector": "Devlet",
+      "program": "Hassas Tarım ve Tarımsal Robotlar (İngilizce)",
+      "programRaw": "Hassas Tarım ve Tarımsal Robotlar (İngilizce) (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "30",
+          "placed": "31",
+          "rank": "544.632",
+          "rankNumeric": 544632,
+          "score": "256,17914",
+          "scoreNumeric": 256.17914
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "SİVAS BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ",
+      "faculty": "Tarım Bilimleri Ve Teknoloji Fakültesi",
+      "city": "SİVAS",
+      "sector": "Devlet",
+      "program": "Hassas Tarım ve Tarımsal Robotlar",
+      "programRaw": "Hassas Tarım ve Tarımsal Robotlar (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "20",
+          "placed": "22",
+          "rank": "563.871",
+          "rankNumeric": 563871,
+          "score": "253,81569",
+          "scoreNumeric": 253.81569
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "BURDUR MEHMET AKİF ERSOY ÜNİVERSİTESİ",
+      "faculty": "Fen-Edebiyat Fakültesi",
+      "city": "BURDUR",
+      "sector": "Devlet",
+      "program": "Hassas Tarım ve Tarımsal Robotlar",
+      "programRaw": "Hassas Tarım ve Tarımsal Robotlar (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "30",
+          "placed": "32",
+          "rank": "616.357",
+          "rankNumeric": 616357,
+          "score": "247,83737",
+          "scoreNumeric": 247.83737
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,1 +1,57 @@
-{"name":"Yapı Yüzeyi Tasarım Teknikerliği","slug":"yapi-yuzeyi-tasarim-teknikerligi-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/yapi-yuzeyi-tasarim-teknikerligi-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari/","rows":[{"university":"ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ","faculty":"Çanakkale Teknik Bilimler Meslek Yüksekokulu","city":"ÇANAKKALE","sector":"Devlet","program":"Yapı Yüzeyi Tasarım Teknikerliği","programRaw":"Yapı Yüzeyi Tasarım Teknikerliği (2 Yıllık)","scoreType":"TYT","years":[{"year":2025,"quota":"20","placed":"21","rank":"1.101.694","rankNumeric":1101694,"score":"280,61975","scoreNumeric":280.61975},{"year":2024,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "Yapı Yüzeyi Tasarım Teknikerliği",
+  "slug": "yapi-yuzeyi-tasarim-teknikerligi-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/yapi-yuzeyi-tasarim-teknikerligi-2-yillik-2026-taban-puanlari-son-4-yil-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ",
+      "faculty": "Çanakkale Teknik Bilimler Meslek Yüksekokulu",
+      "city": "ÇANAKKALE",
+      "sector": "Devlet",
+      "program": "Yapı Yüzeyi Tasarım Teknikerliği",
+      "programRaw": "Yapı Yüzeyi Tasarım Teknikerliği (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "20",
+          "placed": "21",
+          "rank": "1.101.694",
+          "rankNumeric": 1101694,
+          "score": "280,61975",
+          "scoreNumeric": 280.61975
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,1 +1,104 @@
-{"name":"Doğa Koruma ve Biyoçeşitlilik Yönetimi","slug":"doga-koruma-ve-biyocesitlilik-yonetimi-2026-taban-puanlari-son-4-yil-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/doga-koruma-ve-biyocesitlilik-yonetimi-2026-taban-puanlari-son-4-yil-basari-siralamalari/","rows":[{"university":"KASTAMONU ÜNİVERSİTESİ","faculty":"Orman Fakültesi","city":"KASTAMONU","sector":"Devlet","program":"Doğa Koruma ve Biyoçeşitlilik Yönetimi","programRaw":"Doğa Koruma ve Biyoçeşitlilik Yönetimi (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"30","placed":"32","rank":"713.034","rankNumeric":713034,"score":"238,41098","scoreNumeric":238.41098},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"KARABÜK ÜNİVERSİTESİ","faculty":"Orman Fakültesi","city":"KARABÜK","sector":"Devlet","program":"Doğa Koruma ve Biyoçeşitlilik Yönetimi","programRaw":"Doğa Koruma ve Biyoçeşitlilik Yönetimi (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"30","placed":"32","rank":"888.709","rankNumeric":888709,"score":"223,73448","scoreNumeric":223.73448},{"year":2024,"quota":"—","placed":"—","rank":"…","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "Doğa Koruma ve Biyoçeşitlilik Yönetimi",
+  "slug": "doga-koruma-ve-biyocesitlilik-yonetimi-2026-taban-puanlari-son-4-yil-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/doga-koruma-ve-biyocesitlilik-yonetimi-2026-taban-puanlari-son-4-yil-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "KASTAMONU ÜNİVERSİTESİ",
+      "faculty": "Orman Fakültesi",
+      "city": "KASTAMONU",
+      "sector": "Devlet",
+      "program": "Doğa Koruma ve Biyoçeşitlilik Yönetimi",
+      "programRaw": "Doğa Koruma ve Biyoçeşitlilik Yönetimi (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "30",
+          "placed": "32",
+          "rank": "713.034",
+          "rankNumeric": 713034,
+          "score": "238,41098",
+          "scoreNumeric": 238.41098
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "KARABÜK ÜNİVERSİTESİ",
+      "faculty": "Orman Fakültesi",
+      "city": "KARABÜK",
+      "sector": "Devlet",
+      "program": "Doğa Koruma ve Biyoçeşitlilik Yönetimi",
+      "programRaw": "Doğa Koruma ve Biyoçeşitlilik Yönetimi (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "30",
+          "placed": "32",
+          "rank": "888.709",
+          "rankNumeric": 888709,
+          "score": "223,73448",
+          "scoreNumeric": 223.73448
+        },
+        {
+          "year": 2024,
+          "quota": "—",
+          "placed": "—",
+          "rank": "…",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,1 +1,106 @@
-{"name":"İç Mimarlık ve Mobilya Tasarımı","slug":"ic-mimarlik-ve-mobilya-tasarimi-2025-taban-puanlari-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/ic-mimarlik-ve-mobilya-tasarimi-2025-taban-puanlari-basari-siralamalari/","rows":[{"university":"ULUSLARARASI BALKAN ÜNİVERSİTESİ","faculty":"Sanat ve Tasarım Fakültesi (ÜSKÜP-MAKEDONYA) (Yurt Dışı )","city":null,"sector":null,"program":"İç Mimarlık ve Mobilya Tasarımı (%25 İndirimli)","programRaw":"İç Mimarlık ve Mobilya Tasarımı (%25 İndirimli) (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"5","placed":"1","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2024,"quota":"5","placed":"—","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"ULUSLARARASI BALKAN ÜNİVERSİTESİ","faculty":"Sanat ve Tasarım Fakültesi (ÜSKÜP-MAKEDONYA) (Yurt Dışı )","city":null,"sector":null,"program":"İç Mimarlık ve Mobilya Tasarımı (%50 İndirimli)","programRaw":"İç Mimarlık ve Mobilya Tasarımı (%50 İndirimli) (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"5","placed":"2","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2024,"quota":"5","placed":"2","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"ULUSLARARASI BALKAN ÜNİVERSİTESİ","faculty":"Sanat ve Tasarım Fakültesi (ÜSKÜP-MAKEDONYA) (Yurt Dışı )","city":null,"sector":null,"program":"İç Mimarlık ve Mobilya Tasarımı (Ücretli)","programRaw":"İç Mimarlık ve Mobilya Tasarımı (Ücretli) (4 Yıllık)","scoreType":"SAY","years":[{"year":2025,"quota":"5","placed":"—","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2024,"quota":"15","placed":"1","rank":"Dolmadı","rankNumeric":null,"score":"Dolmadı","scoreNumeric":null},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":["Hiçbir satırda il bilgisi yok"]}
+{
+  "name": "İç Mimarlık ve Mobilya Tasarımı",
+  "slug": "ic-mimarlik-ve-mobilya-tasarimi-2025-taban-puanlari-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/ic-mimarlik-ve-mobilya-tasarimi-2025-taban-puanlari-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "ULUSLARARASI BALKAN ÜNİVERSİTESİ",
+      "faculty": "Sanat Ve Tasarım Fakültesi",
+      "city": null,
+      "sector": "Devlet",
+      "program": "İç Mimarlık ve Mobilya Tasarımı (Ücretli)",
+      "programRaw": "İç Mimarlık ve Mobilya Tasarımı (Ücretli) (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "5",
+          "placed": "—",
+          "rank": "Dolmadı",
+          "rankNumeric": null,
+          "score": "Dolmadı",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2024,
+          "quota": "15",
+          "placed": "1",
+          "rank": "Dolmadı",
+          "rankNumeric": null,
+          "score": "Dolmadı",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "ULUSLARARASI BALKAN ÜNİVERSİTESİ",
+      "faculty": "Sanat Ve Tasarım Fakültesi",
+      "city": null,
+      "sector": "Devlet",
+      "program": "İç Mimarlık ve Mobilya Tasarımı (%50 İndirimli)",
+      "programRaw": "İç Mimarlık ve Mobilya Tasarımı (%50 İndirimli) (4 Yıllık)",
+      "scoreType": "SAY",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "5",
+          "placed": "2",
+          "rank": "Dolmadı",
+          "rankNumeric": null,
+          "score": "Dolmadı",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2024,
+          "quota": "5",
+          "placed": "2",
+          "rank": "Dolmadı",
+          "rankNumeric": null,
+          "score": "Dolmadı",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "Hiçbir satırda il bilgisi yok"
+  ]
+}

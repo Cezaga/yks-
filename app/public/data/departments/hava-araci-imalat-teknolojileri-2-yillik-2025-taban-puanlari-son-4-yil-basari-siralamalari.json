@@ -1,1 +1,104 @@
-{"name":"Hava Aracı İmalat Teknolojileri","slug":"hava-araci-imalat-teknolojileri-2-yillik-2025-taban-puanlari-son-4-yil-basari-siralamalari","level":null,"scoreType":null,"url":"https://www.basarisiralamalari.com/hava-araci-imalat-teknolojileri-2-yillik-2025-taban-puanlari-son-4-yil-basari-siralamalari/","rows":[{"university":"TÜRK HAVA KURUMU ÜNİVERSİTESİ","faculty":"Ankara Havacılık Meslek Yüksekokulu","city":"ANKARA","sector":"Vakıf","program":"Hava Aracı İmalat Teknolojileri (Burslu)","programRaw":"Hava Aracı İmalat Teknolojileri (Burslu) (2 Yıllık)","scoreType":"TYT","years":[{"year":2025,"quota":"6","placed":"6","rank":"195.955","rankNumeric":195955,"score":"391,44287","scoreNumeric":391.44287},{"year":2024,"quota":"4","placed":"4","rank":"230.247","rankNumeric":230247,"score":"388,07177","scoreNumeric":388.07177},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]},{"university":"TÜRK HAVA KURUMU ÜNİVERSİTESİ","faculty":"Ankara Havacılık Meslek Yüksekokulu","city":"ANKARA","sector":"Vakıf","program":"Hava Aracı İmalat Teknolojileri (Ücretli)","programRaw":"Hava Aracı İmalat Teknolojileri (Ücretli) (2 Yıllık)","scoreType":"TYT","years":[{"year":2025,"quota":"37","placed":"37","rank":"1.733.247","rankNumeric":1733247,"score":"237,02627","scoreNumeric":237.02627},{"year":2024,"quota":"25","placed":"25","rank":"2.206.043","rankNumeric":2206043,"score":"219,49318","scoreNumeric":219.49318},{"year":2023,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null},{"year":2022,"quota":"—","placed":"—","rank":"—","rankNumeric":null,"score":"—","scoreNumeric":null}]}],"warnings":[]}
+{
+  "name": "Hava Aracı İmalat Teknolojileri",
+  "slug": "hava-araci-imalat-teknolojileri-2-yillik-2025-taban-puanlari-son-4-yil-basari-siralamalari",
+  "level": null,
+  "scoreType": null,
+  "url": "https://www.basarisiralamalari.com/hava-araci-imalat-teknolojileri-2-yillik-2025-taban-puanlari-son-4-yil-basari-siralamalari/",
+  "rows": [
+    {
+      "university": "TÜRK HAVA KURUMU ÜNİVERSİTESİ",
+      "faculty": "Ankara Havacılık Meslek Yüksekokulu",
+      "city": "ANKARA",
+      "sector": "Vakıf",
+      "program": "Hava Aracı İmalat Teknolojileri (Burslu)",
+      "programRaw": "Hava Aracı İmalat Teknolojileri (Burslu) (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "6",
+          "placed": "6",
+          "rank": "195.955",
+          "rankNumeric": 195955,
+          "score": "391,44287",
+          "scoreNumeric": 391.44287
+        },
+        {
+          "year": 2024,
+          "quota": "4",
+          "placed": "4",
+          "rank": "230.247",
+          "rankNumeric": 230247,
+          "score": "388,07177",
+          "scoreNumeric": 388.07177
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    },
+    {
+      "university": "TÜRK HAVA KURUMU ÜNİVERSİTESİ",
+      "faculty": "Ankara Havacılık Meslek Yüksekokulu",
+      "city": "ANKARA",
+      "sector": "Vakıf",
+      "program": "Hava Aracı İmalat Teknolojileri (Ücretli)",
+      "programRaw": "Hava Aracı İmalat Teknolojileri (Ücretli) (2 Yıllık)",
+      "scoreType": "TYT",
+      "years": [
+        {
+          "year": 2025,
+          "quota": "37",
+          "placed": "37",
+          "rank": "1.733.247",
+          "rankNumeric": 1733247,
+          "score": "237,02627",
+          "scoreNumeric": 237.02627
+        },
+        {
+          "year": 2024,
+          "quota": "25",
+          "placed": "25",
+          "rank": "2.206.043",
+          "rankNumeric": 2206043,
+          "score": "219,49318",
+          "scoreNumeric": 219.49318
+        },
+        {
+          "year": 2023,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        },
+        {
+          "year": 2022,
+          "quota": "—",
+          "placed": "—",
+          "rank": "—",
+          "rankNumeric": null,
+          "score": "—",
+          "scoreNumeric": null
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

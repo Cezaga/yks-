@@ -17,6 +17,8 @@ export interface ProgramRow {
   language: string
   byYear: Map<number, YearEntry>
   baseRank: number | null
+  /** Programın YÖKATLAS sayfası (varsa). */
+  yokUrl: string | null
 }
 
 export interface RankRange {

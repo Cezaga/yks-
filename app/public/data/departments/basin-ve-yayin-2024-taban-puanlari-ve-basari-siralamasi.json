@@ -13,6 +13,7 @@
       "program": "Basın ve Yayın (Burslu)",
       "programRaw": "Basın ve Yayın (Burslu) (4 Yıllık)",
       "scoreType": "SÖZ",
+      "kod": 300210703,
       "years": [
         {
           "year": 2025,
@@ -60,6 +61,7 @@
       "program": "Basın ve Yayın (%50 İndirimli)",
       "programRaw": "Basın ve Yayın (%50 İndirimli) (4 Yıllık)",
       "scoreType": "SÖZ",
+      "kod": 300290553,
       "years": [
         {
           "year": 2025,

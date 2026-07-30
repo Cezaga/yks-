@@ -13,6 +13,7 @@
       "program": "Engelliler İçin Gölge Öğreticilik (Burslu)",
       "programRaw": "Engelliler İçin Gölge Öğreticilik (Burslu) (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 201490100,
       "years": [
         {
           "year": 2025,
@@ -60,6 +61,7 @@
       "program": "Engelliler İçin Gölge Öğreticilik (%50 İndirimli)",
       "programRaw": "Engelliler İçin Gölge Öğreticilik (%50 İndirimli) (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 201490101,
       "years": [
         {
           "year": 2025,

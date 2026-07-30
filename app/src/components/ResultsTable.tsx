@@ -24,6 +24,9 @@ function buildRows(departments: DepartmentData[], cityKeys: Set<string>): Progra
       const byYear = new Map<number, (typeof row.years)[number]>()
       for (const y of row.years) byYear.set(y.year, y)
       const base = byYear.get(BASE_YEAR)
+      const yokUrl = row.kod
+        ? `https://yokatlas.yok.gov.tr/${dept.level === '2yillik' ? 'onlisans' : 'lisans'}.php?y=${row.kod}`
+        : null
       out.push({
         // idx keeps React keys unique — same uni can offer one program under
         // several quotas that collapse to the same display name.
@@ -39,7 +42,8 @@ function buildRows(departments: DepartmentData[], cityKeys: Set<string>): Progra
         nationality: deriveNationality(row.programRaw),
         language: deriveLanguage(row.programRaw),
         byYear,
-        baseRank: base?.rankNumeric ?? null
+        baseRank: base?.rankNumeric ?? null,
+        yokUrl
       })
     }
   }

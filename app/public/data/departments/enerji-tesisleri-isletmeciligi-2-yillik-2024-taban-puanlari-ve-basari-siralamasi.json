@@ -13,6 +13,7 @@
       "program": "Enerji Tesisleri İşletmeciliği (Burslu)",
       "programRaw": "Enerji Tesisleri İşletmeciliği (Burslu) (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 210302250,
       "years": [
         {
           "year": 2025,
@@ -60,6 +61,7 @@
       "program": "Enerji Tesisleri İşletmeciliği",
       "programRaw": "Enerji Tesisleri İşletmeciliği (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 102751296,
       "years": [
         {
           "year": 2025,
@@ -107,6 +109,7 @@
       "program": "Enerji Tesisleri İşletmeciliği",
       "programRaw": "Enerji Tesisleri İşletmeciliği (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 104590568,
       "years": [
         {
           "year": 2025,
@@ -154,6 +157,7 @@
       "program": "Enerji Tesisleri İşletmeciliği (%50 İndirimli)",
       "programRaw": "Enerji Tesisleri İşletmeciliği (%50 İndirimli) (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 210302257,
       "years": [
         {
           "year": 2025,

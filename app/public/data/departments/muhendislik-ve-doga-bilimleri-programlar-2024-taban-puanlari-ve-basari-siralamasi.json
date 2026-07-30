@@ -13,6 +13,7 @@
       "program": "Mühendislik ve Doğa Bilimleri Programları (İngilizce) (Burslu)",
       "programRaw": "Mühendislik ve Doğa Bilimleri Programları (İngilizce) (Burslu) (4 Yıllık)",
       "scoreType": "SAY",
+      "kod": 205110117,
       "years": [
         {
           "year": 2025,
@@ -60,6 +61,7 @@
       "program": "Mühendislik ve Doğa Bilimleri Programları (İngilizce) (%50 İndirimli)",
       "programRaw": "Mühendislik ve Doğa Bilimleri Programları (İngilizce) (%50 İndirimli) (4 Yıllık)",
       "scoreType": "SAY",
+      "kod": 205110126,
       "years": [
         {
           "year": 2025,
@@ -107,6 +109,7 @@
       "program": "Mühendislik ve Doğa Bilimleri Programları (İngilizce) (Ücretli)",
       "programRaw": "Mühendislik ve Doğa Bilimleri Programları (İngilizce) (Ücretli) (4 Yıllık)",
       "scoreType": "SAY",
+      "kod": 205110092,
       "years": [
         {
           "year": 2025,

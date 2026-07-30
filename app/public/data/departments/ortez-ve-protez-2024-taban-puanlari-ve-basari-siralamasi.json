@@ -13,6 +13,7 @@
       "program": "Ortez ve Protez (Burslu)",
       "programRaw": "Ortez ve Protez (Burslu) (4 Yıllık)",
       "scoreType": "SAY",
+      "kod": 203190104,
       "years": [
         {
           "year": 2025,
@@ -60,6 +61,7 @@
       "program": "Ortez ve Protez",
       "programRaw": "Ortez ve Protez (4 Yıllık)",
       "scoreType": "SAY",
+      "kod": 101190424,
       "years": [
         {
           "year": 2025,
@@ -107,6 +109,7 @@
       "program": "Ortez ve Protez (Ankara)",
       "programRaw": "Ortez ve Protez (Ankara) (4 Yıllık)",
       "scoreType": "SAY",
+      "kod": 111091393,
       "years": [
         {
           "year": 2025,
@@ -154,6 +157,7 @@
       "program": "Ortez ve Protez",
       "programRaw": "Ortez ve Protez (4 Yıllık)",
       "scoreType": "SAY",
+      "kod": 108290278,
       "years": [
         {
           "year": 2025,
@@ -201,6 +205,7 @@
       "program": "Ortez ve Protez (Ücretli)",
       "programRaw": "Ortez ve Protez (Ücretli) (4 Yıllık)",
       "scoreType": "SAY",
+      "kod": 203101207,
       "years": [
         {
           "year": 2025,

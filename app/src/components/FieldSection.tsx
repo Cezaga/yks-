@@ -125,7 +125,25 @@ function Table({ rows, isOpen, onToggle }: TableProps) {
                 </td>
                 <td className="rt-city">{r.city}</td>
                 <td className="rt-uni">{r.university}</td>
-                <td className="rt-program">{r.program}</td>
+                <td className="rt-program">
+                  {r.yokUrl ? (
+                    <a
+                      href={r.yokUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rt-program-link"
+                      title="Bu programın YÖKATLAS sayfasını aç"
+                      onClick={e => e.stopPropagation()}
+                    >
+                      {r.program}
+                      <svg className="rt-ext" viewBox="0 0 16 16" aria-hidden="true">
+                        <path d="M6 3h7v7M13 3l-7 7M11 9.5V13H3V5h3.5" />
+                      </svg>
+                    </a>
+                  ) : (
+                    r.program
+                  )}
+                </td>
                 <td className="rt-primary">{r.byYear.get(BASE_YEAR)?.rank ?? '—'}</td>
                 <td className="rt-chevron-col">
                   <span className="rt-chevron" aria-hidden="true">

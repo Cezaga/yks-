@@ -13,6 +13,7 @@
       "program": "Yat Kaptanlığı",
       "programRaw": "Yat Kaptanlığı (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 107651246,
       "years": [
         {
           "year": 2025,
@@ -60,6 +61,7 @@
       "program": "Yat Kaptanlığı (Burslu)",
       "programRaw": "Yat Kaptanlığı (Burslu) (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 202400255,
       "years": [
         {
           "year": 2025,
@@ -80,6 +82,7 @@
       "program": "Yat Kaptanlığı (%50 İndirimli)",
       "programRaw": "Yat Kaptanlığı (%50 İndirimli) (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 202400262,
       "years": [
         {
           "year": 2025,

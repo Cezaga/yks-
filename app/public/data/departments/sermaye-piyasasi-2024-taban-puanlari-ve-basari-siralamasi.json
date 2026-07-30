@@ -13,6 +13,7 @@
       "program": "Sermaye Piyasası",
       "programRaw": "Sermaye Piyasası (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 107290478,
       "years": [
         {
           "year": 2025,
@@ -60,6 +61,7 @@
       "program": "Sermaye Piyasası (Burslu)",
       "programRaw": "Sermaye Piyasası (Burslu) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 210301529,
       "years": [
         {
           "year": 2025,
@@ -107,6 +109,7 @@
       "program": "Sermaye Piyasası",
       "programRaw": "Sermaye Piyasası (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 111790486,
       "years": [
         {
           "year": 2025,
@@ -154,6 +157,7 @@
       "program": "Sermaye Piyasası (Burslu)",
       "programRaw": "Sermaye Piyasası (Burslu) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 210402768,
       "years": [
         {
           "year": 2025,
@@ -201,6 +205,7 @@
       "program": "Sermaye Piyasası",
       "programRaw": "Sermaye Piyasası (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 102590370,
       "years": [
         {
           "year": 2025,
@@ -248,6 +253,7 @@
       "program": "Sermaye Piyasası",
       "programRaw": "Sermaye Piyasası (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 108690275,
       "years": [
         {
           "year": 2025,
@@ -295,6 +301,7 @@
       "program": "Sermaye Piyasası (%50 İndirimli)",
       "programRaw": "Sermaye Piyasası (%50 İndirimli) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 210301536,
       "years": [
         {
           "year": 2025,
@@ -342,6 +349,7 @@
       "program": "Sermaye Piyasası (Ücretli)",
       "programRaw": "Sermaye Piyasası (Ücretli) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 210402775,
       "years": [
         {
           "year": 2025,
@@ -389,6 +397,7 @@
       "program": "Sermaye Piyasası (%50 İndirimli)",
       "programRaw": "Sermaye Piyasası (%50 İndirimli) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 210402782,
       "years": [
         {
           "year": 2025,

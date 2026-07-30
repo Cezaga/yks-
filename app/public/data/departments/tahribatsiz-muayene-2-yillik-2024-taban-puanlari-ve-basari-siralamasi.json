@@ -13,6 +13,7 @@
       "program": "Tahribatsız Muayene (Burslu)",
       "programRaw": "Tahribatsız Muayene (Burslu) (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 201750088,
       "years": [
         {
           "year": 2025,
@@ -60,6 +61,7 @@
       "program": "Tahribatsız Muayene",
       "programRaw": "Tahribatsız Muayene (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 102100101,
       "years": [
         {
           "year": 2025,
@@ -80,6 +82,7 @@
       "program": "Tahribatsız Muayene (%50 İndirimli)",
       "programRaw": "Tahribatsız Muayene (%50 İndirimli) (2 Yıllık)",
       "scoreType": "TYT",
+      "kod": 201750158,
       "years": [
         {
           "year": 2025,

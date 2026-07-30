@@ -90,6 +90,10 @@ function App() {
   const selectAllDepts = () => setSelectedDepts(index.slice())
   const clearDepts = () => setSelectedDepts([])
 
+  // Tüm şehirler = 81 il + KKTC (Kıbrıs) + YD (yurt dışı); hepsi turkeyCities'te.
+  const selectAllCities = () => setSelectedPlates(new Set(turkeyCities.map(c => c.plate)))
+  const clearCities = () => setSelectedPlates(new Set())
+
   const handleConfirm = async () => {
     if (selectedPlates.size === 0 || selectedDepts.length === 0) return
     setLoading(true)
@@ -154,26 +158,45 @@ function App() {
             <CitySearch selectedPlates={selectedPlates} onToggle={togglePlate} />
             <TurkeyMap selected={selectedPlates} onToggle={togglePlate} />
             <div className="map-extra">
-              <span className="map-extra-hint">Kıbrıs haritada güneyde; yurt dışı için:</span>
+              <button
+                type="button"
+                className="map-extra-btn is-primary"
+                onClick={selectAllCities}
+                title="81 il + Kıbrıs + yurt dışını birden seçer"
+              >
+                Tüm şehirler
+              </button>
               <button
                 type="button"
                 className={`map-extra-btn${selectedPlates.has('YD') ? ' is-active' : ''}`}
                 onClick={() => togglePlate('YD')}
                 aria-pressed={selectedPlates.has('YD')}
               >
-                🌍 Yurt dışı üniversiteler
+                🌍 Yurt dışı
               </button>
+              {selectedPlates.size > 0 && (
+                <button type="button" className="map-extra-clear" onClick={clearCities}>
+                  Temizle
+                </button>
+              )}
+              <span className="map-extra-hint">Kıbrıs haritada güneyde.</span>
             </div>
             <div className="selected-cities">
               {selectedCityNames.length === 0 && <p className="app-empty">Henüz il seçmediniz.</p>}
-              {[...selectedPlates].map(plate => (
-                <span key={plate} className="chip">
-                  {cityByPlate.get(plate)}
-                  <button type="button" onClick={() => togglePlate(plate)} aria-label="kaldır">
-                    ×
-                  </button>
-                </span>
-              ))}
+              {selectedPlates.size > 20 ? (
+                <p className="department-picker-summary">
+                  <strong>{selectedPlates.size}</strong> şehir seçili (Kıbrıs ve yurt dışı dahil).
+                </p>
+              ) : (
+                [...selectedPlates].map(plate => (
+                  <span key={plate} className="chip">
+                    {cityByPlate.get(plate)}
+                    <button type="button" onClick={() => togglePlate(plate)} aria-label="kaldır">
+                      ×
+                    </button>
+                  </span>
+                ))
+              )}
             </div>
           </section>
 

@@ -13,6 +13,7 @@
       "program": "Siyaset Bilimi (Fransızca)",
       "programRaw": "Siyaset Bilimi (Fransızca) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 104010088,
       "years": [
         {
           "year": 2025,
@@ -60,6 +61,7 @@
       "program": "Siyaset Bilimi (İngilizce) (Burslu)",
       "programRaw": "Siyaset Bilimi (İngilizce) (Burslu) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 300110501,
       "years": [
         {
           "year": 2025,
@@ -107,6 +109,7 @@
       "program": "Siyaset Bilimi (İngilizce) (Ücretli)",
       "programRaw": "Siyaset Bilimi (İngilizce) (Ücretli) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 300190463,
       "years": [
         {
           "year": 2025,
@@ -154,6 +157,7 @@
       "program": "Siyaset Bilimi (İngilizce) (%50 İndirimli)",
       "programRaw": "Siyaset Bilimi (İngilizce) (%50 İndirimli) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 300111014,
       "years": [
         {
           "year": 2025,

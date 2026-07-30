@@ -146,6 +146,7 @@ function rebuildDept(grup, lvl, slug) {
       program: y.birim,
       programRaw: y.birim + ' (' + (y.sure || (lvl === 'ÖNLISANS' ? 2 : 4)) + ' Yıllık)',
       scoreType: y.puan || file.scoreType,
+      kod: y.kod, // YÖKATLAS ÖSYM program kodu → o programın YÖKATLAS sayfası
       years
     })
     if (old) merged++; else added++

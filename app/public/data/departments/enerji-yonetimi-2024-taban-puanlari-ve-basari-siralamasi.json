@@ -13,6 +13,7 @@
       "program": "Enerji Yönetimi (Burslu)",
       "programRaw": "Enerji Yönetimi (Burslu) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 204090216,
       "years": [
         {
           "year": 2025,
@@ -60,6 +61,7 @@
       "program": "Enerji Yönetimi",
       "programRaw": "Enerji Yönetimi (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 102790235,
       "years": [
         {
           "year": 2025,
@@ -107,6 +109,7 @@
       "program": "Enerji Yönetimi (%50 İndirimli)",
       "programRaw": "Enerji Yönetimi (%50 İndirimli) (4 Yıllık)",
       "scoreType": "EA",
+      "kod": 204090230,
       "years": [
         {
           "year": 2025,

@@ -18,6 +18,8 @@ export interface RankingRow {
   program: string
   programRaw: string
   scoreType: string
+  /** YÖKATLAS ÖSYM program kodu (varsa). Programın YÖKATLAS sayfasına link için. */
+  kod?: number
   years: YearEntry[]
 }
 

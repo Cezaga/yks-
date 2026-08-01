@@ -94,6 +94,11 @@
 .department-picker-score-btn[data-field='DİL'] {
   --sc: var(--field-dil);
 }
+.department-picker-score-btn[data-field='TYT'] {
+  --sc: var(--field-tyt);
+  /* TYT önlisans; 2 sütunlu ızgarada tek başına kalmasın diye tam genişlik. */
+  grid-column: 1 / -1;
+}
 
 .department-picker-score-btn .department-picker-tag {
   padding: 1px var(--space-2);

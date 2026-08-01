@@ -20,12 +20,13 @@ interface DepartmentPickerProps {
   onSelectByScore: (code: string) => void
 }
 
-// Puan türüne göre toplu seçim (TYT/2 yıllık hariç — kullanıcı AYT türlerini istedi).
+// Puan türüne göre toplu seçim.
 const SCORE_GROUPS: { code: string; label: string }[] = [
   { code: 'SAY', label: 'Sayısal' },
   { code: 'EA', label: 'Eşit Ağırlık' },
   { code: 'SÖZ', label: 'Sözel' },
-  { code: 'DİL', label: 'Dil' }
+  { code: 'DİL', label: 'Dil' },
+  { code: 'TYT', label: 'TYT (2 Yıllık)' }
 ]
 
 // Bu sayının üstünde tek tek chip göstermek yerine özet gösteriyoruz

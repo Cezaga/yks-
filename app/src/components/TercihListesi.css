@@ -82,6 +82,78 @@
   background: color-mix(in srgb, var(--danger) 8%, transparent);
 }
 
+/* --- İndir açılır menüsü --- */
+.tercih-indir {
+  position: relative;
+  display: inline-flex;
+}
+
+.tercih-indir-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 50;
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-1);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+/* menü öğeleri: yukarıdaki .tercih-actions button stilini ezer */
+.tercih-indir-menu button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--text-primary);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  text-align: left;
+}
+
+.tercih-indir-menu button:hover {
+  background: var(--surface-hover);
+  border-color: transparent;
+}
+
+.tercih-indir-menu button em {
+  margin-left: auto;
+  font-style: normal;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.tercih-indir-ico {
+  font-size: 15px;
+}
+
+@media (max-width: 640px) {
+  .tercih-indir {
+    display: block;
+  }
+  .tercih-indir-btn {
+    width: 100%;
+  }
+  /* Dar ekranda İndir hücresi ~78px; menü hücreye değil sağ kenara hizalanıp
+     okunur genişlikte açılsın (sola doğru büyür, viewport'a sığar). */
+  .tercih-indir-menu {
+    right: 0;
+    left: auto;
+    min-width: min(240px, 82vw);
+  }
+  .tercih-indir-menu button {
+    padding: var(--space-3);
+  }
+}
+
 .tercih-list {
   list-style: none;
   margin: 0;

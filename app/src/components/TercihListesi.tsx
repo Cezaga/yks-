@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   MAX_TERCIH,
   clearTercihler,
@@ -7,11 +7,30 @@ import {
   useTercihler
 } from '../lib/tercihler'
 import { buildShareUrl } from '../lib/share'
+import { exportCSV, exportExcel, exportPDF, exportWord } from '../lib/export'
 import './TercihListesi.css'
 
 export default function TercihListesi() {
   const list = useTercihler()
   const [durum, setDurum] = useState<string | null>(null)
+  const [indirAcik, setIndirAcik] = useState(false)
+  const indirRef = useRef<HTMLDivElement>(null)
+
+  // Menü dışına tıklayınca / Esc ile kapan.
+  useEffect(() => {
+    if (!indirAcik) return
+    const onDown = (e: MouseEvent) => {
+      if (indirRef.current && !indirRef.current.contains(e.target as Node)) setIndirAcik(false)
+    }
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setIndirAcik(false)
+    document.addEventListener('mousedown', onDown)
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('mousedown', onDown)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [indirAcik])
+
   if (list.length === 0) return null
 
   const bildir = (msg: string) => {
@@ -19,7 +38,11 @@ export default function TercihListesi() {
     window.setTimeout(() => setDurum(null), 2500)
   }
 
-  const yazdir = () => window.print()
+  const indir = (fn: () => void, msg: string) => {
+    setIndirAcik(false)
+    fn()
+    bildir(msg)
+  }
 
   const kopyala = async () => {
     const text = list
@@ -52,7 +75,33 @@ export default function TercihListesi() {
         <div className="tercih-actions">
           <button type="button" onClick={paylas}>Paylaş</button>
           <button type="button" onClick={kopyala}>Kopyala</button>
-          <button type="button" onClick={yazdir}>Yazdır</button>
+          <div className="tercih-indir" ref={indirRef}>
+            <button
+              type="button"
+              className="tercih-indir-btn"
+              onClick={() => setIndirAcik(o => !o)}
+              aria-haspopup="menu"
+              aria-expanded={indirAcik}
+            >
+              İndir ▾
+            </button>
+            {indirAcik && (
+              <div className="tercih-indir-menu" role="menu">
+                <button type="button" role="menuitem" onClick={() => indir(exportPDF, 'Yazdır penceresinden "PDF olarak kaydet"i seç.')}>
+                  <span className="tercih-indir-ico">📄</span> PDF <em>(yazdır / kaydet)</em>
+                </button>
+                <button type="button" role="menuitem" onClick={() => indir(() => exportExcel(list), 'Excel dosyası indirildi.')}>
+                  <span className="tercih-indir-ico">📊</span> Excel <em>(.xls)</em>
+                </button>
+                <button type="button" role="menuitem" onClick={() => indir(() => exportWord(list), 'Word dosyası indirildi.')}>
+                  <span className="tercih-indir-ico">📝</span> Word <em>(.doc)</em>
+                </button>
+                <button type="button" role="menuitem" onClick={() => indir(() => exportCSV(list), 'CSV dosyası indirildi.')}>
+                  <span className="tercih-indir-ico">📋</span> CSV <em>(.csv)</em>
+                </button>
+              </div>
+            )}
+          </div>
           <button
             type="button"
             className="tercih-clear"

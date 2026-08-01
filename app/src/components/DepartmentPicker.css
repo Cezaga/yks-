@@ -53,6 +53,56 @@
   border-color: color-mix(in srgb, var(--danger) 40%, transparent);
 }
 
+/* Puan türüne göre toplu seçim düğmeleri (SAY/EA/SÖZ/DİL renkleriyle) */
+.department-picker-scoretypes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+}
+
+.department-picker-score-btn {
+  --sc: var(--brand);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid color-mix(in srgb, var(--sc) 45%, var(--border-subtle));
+  background: color-mix(in srgb, var(--sc) 8%, var(--surface-card));
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  transition: background var(--duration-fast) var(--ease), border-color var(--duration-fast) var(--ease);
+}
+
+.department-picker-score-btn:hover {
+  background: color-mix(in srgb, var(--sc) 16%, var(--surface-card));
+  border-color: var(--sc);
+}
+
+.department-picker-score-btn[data-field='SAY'] {
+  --sc: var(--field-say);
+}
+.department-picker-score-btn[data-field='EA'] {
+  --sc: var(--field-ea);
+}
+.department-picker-score-btn[data-field='SÖZ'] {
+  --sc: var(--field-soz);
+}
+.department-picker-score-btn[data-field='DİL'] {
+  --sc: var(--field-dil);
+}
+
+.department-picker-score-btn .department-picker-tag {
+  padding: 1px var(--space-2);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--sc) 18%, transparent);
+  color: var(--sc);
+  font-weight: var(--weight-bold);
+}
+
 .department-picker-summary {
   margin: 0;
   padding: var(--space-3);

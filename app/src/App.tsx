@@ -90,6 +90,10 @@ function App() {
   const selectAllDepts = () => setSelectedDepts(index.slice())
   const clearDepts = () => setSelectedDepts([])
 
+  // Bir puan türündeki (SAY/EA/SÖZ/DİL) tüm bölümleri seçime ekler.
+  const selectDeptsByScore = (code: string) =>
+    addPackage({ slugs: index.filter(d => d.scoreType === code).map(d => d.slug) })
+
   // Tüm şehirler = 81 il + KKTC (Kıbrıs) + YD (yurt dışı); hepsi turkeyCities'te.
   const selectAllCities = () => setSelectedPlates(new Set(turkeyCities.map(c => c.plate)))
   const clearCities = () => setSelectedPlates(new Set())
@@ -221,6 +225,7 @@ function App() {
               onAddPackage={addPackage}
               onSelectAll={selectAllDepts}
               onClearAll={clearDepts}
+              onSelectByScore={selectDeptsByScore}
             />
           </section>
         </main>

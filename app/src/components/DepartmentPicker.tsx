@@ -17,7 +17,16 @@ interface DepartmentPickerProps {
   onAddPackage: (pkg: DepartmentPackage) => void
   onSelectAll: () => void
   onClearAll: () => void
+  onSelectByScore: (code: string) => void
 }
+
+// Puan türüne göre toplu seçim (TYT/2 yıllık hariç — kullanıcı AYT türlerini istedi).
+const SCORE_GROUPS: { code: string; label: string }[] = [
+  { code: 'SAY', label: 'Sayısal' },
+  { code: 'EA', label: 'Eşit Ağırlık' },
+  { code: 'SÖZ', label: 'Sözel' },
+  { code: 'DİL', label: 'Dil' }
+]
 
 // Bu sayının üstünde tek tek chip göstermek yerine özet gösteriyoruz
 // (653 chip listeyi kilitliyordu).
@@ -30,8 +39,14 @@ export default function DepartmentPicker({
   onRemove,
   onAddPackage,
   onSelectAll,
-  onClearAll
+  onClearAll,
+  onSelectByScore
 }: DepartmentPickerProps) {
+  const scoreCounts = useMemo(() => {
+    const c: Record<string, number> = {}
+    for (const d of index) if (d.scoreType) c[d.scoreType] = (c[d.scoreType] ?? 0) + 1
+    return c
+  }, [index])
   const [query, setQuery] = useState('')
   const selectedSlugs = useMemo(() => new Set(selected.map(d => d.slug)), [selected])
 
@@ -70,6 +85,22 @@ export default function DepartmentPicker({
             Seçimi temizle
           </button>
         )}
+      </div>
+
+      <div className="department-picker-scoretypes">
+        {SCORE_GROUPS.map(g => (
+          <button
+            key={g.code}
+            type="button"
+            className="department-picker-score-btn"
+            data-field={g.code}
+            onClick={() => onSelectByScore(g.code)}
+            title={`Tüm ${g.label} (${g.code}) bölümlerini seçime ekler`}
+          >
+            Tüm {g.label}
+            <span className="department-picker-tag">{scoreCounts[g.code] ?? 0}</span>
+          </button>
+        ))}
       </div>
 
       <div className="department-picker-packages">

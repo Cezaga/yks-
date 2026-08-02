@@ -9,11 +9,12 @@ import type { Tercih } from './tercihler'
 //            @media print yalnızca tercih listesini basar. Türkçe font sorunu yok.
 // ---------------------------------------------------------------------------
 
-const HEADERS = ['#', 'Üniversite', 'Bölüm', 'Şehir', 'Puan Türü', 'Ücret', '2025 Sıra']
+const HEADERS = ['#', 'ÖSYM Kodu', 'Üniversite', 'Bölüm', 'Şehir', 'Puan Türü', 'Ücret', '2025 Sıra']
 
 function rowData(list: Tercih[]): string[][] {
   return list.map((t, i) => [
     String(i + 1),
+    t.kod != null ? String(t.kod) : '—',
     t.university,
     t.programRaw,
     t.city,
@@ -54,7 +55,7 @@ function tableHtml(list: Tercih[]): string {
         `<tr>${r
           .map(
             (c, i) =>
-              `<td style="border:1px solid #b9c6f0;padding:6px 9px;${i === 0 || i === 6 ? 'text-align:center;' : ''}">${escHtml(c)}</td>`
+              `<td style="border:1px solid #b9c6f0;padding:6px 9px;${i === 0 || i === 1 || i === 7 ? 'text-align:center;' : ''}">${escHtml(c)}</td>`
           )
           .join('')}</tr>`
     )

@@ -46,7 +46,10 @@ export default function TercihListesi() {
 
   const kopyala = async () => {
     const text = list
-      .map((t, i) => `${i + 1}. ${t.university} — ${t.programRaw} (${t.city}, ${t.scoreType})`)
+      .map(
+        (t, i) =>
+          `${i + 1}. ${t.university} — ${t.programRaw} (${t.city}, ${t.scoreType})${t.kod != null ? ` [ÖSYM: ${t.kod}]` : ''}`
+      )
       .join('\n')
     try {
       await navigator.clipboard.writeText(text)
@@ -124,6 +127,9 @@ export default function TercihListesi() {
                 {t.university} · {t.city} · {t.scoreType} · {t.funding}
                 {t.rank ? ` · 2025 sıra: ${t.rank}` : ''}
               </span>
+              {t.kod != null && (
+                <span className="tercih-kod">ÖSYM kodu: {t.kod}</span>
+              )}
             </div>
             <div className="tercih-kontrol">
               <button

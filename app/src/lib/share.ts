@@ -16,8 +16,8 @@ import type { Tercih } from './tercihler'
 interface Payload {
   v: 2
   u: string[] // üniversite sözlüğü
-  // [city, uniIndex, programRaw, scoreType, funding, rank]
-  t: [string, number, string, string, string, string][]
+  // [city, uniIndex, programRaw, scoreType, funding, rank, kod?]
+  t: [string, number, string, string, string, string, (number | string)?][]
 }
 
 function base64UrlEncode(bytes: Uint8Array): string {
@@ -54,7 +54,15 @@ function buildPayload(tercihler: Tercih[]): Payload {
   return {
     v: 2,
     u,
-    t: tercihler.map(t => [t.city, uniIdx(t.university), t.programRaw, t.scoreType, t.funding, t.rank ?? ''])
+    t: tercihler.map(t => [
+      t.city,
+      uniIdx(t.university),
+      t.programRaw,
+      t.scoreType,
+      t.funding,
+      t.rank ?? '',
+      t.kod ?? ''
+    ])
   }
 }
 
@@ -79,7 +87,8 @@ function readPayload(p: unknown): Tercih[] {
         programRaw,
         scoreType,
         funding: String(r[4] ?? ''),
-        rank: r[5] ? String(r[5]) : null
+        rank: r[5] ? String(r[5]) : null,
+        kod: r[6] != null && r[6] !== '' ? Number(r[6]) : null
       }
     })
     .filter(t => t.university && t.programRaw)

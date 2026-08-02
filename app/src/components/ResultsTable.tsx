@@ -43,6 +43,7 @@ function buildRows(departments: DepartmentData[], cityKeys: Set<string>): Progra
         language: deriveLanguage(row.programRaw),
         byYear,
         baseRank: base?.rankNumeric ?? null,
+        kod: row.kod ?? null,
         yokUrl
       })
     }

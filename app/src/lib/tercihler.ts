@@ -20,6 +20,8 @@ export interface Tercih {
   funding: string
   /** 2025 başarı sırası — listede göstermek için. */
   rank: string | null
+  /** ÖSYM program kodu (varsa). */
+  kod?: number | null
 }
 
 const STORAGE_KEY = 'yks.tercihler.v1'

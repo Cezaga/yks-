@@ -113,7 +113,8 @@ function Table({ rows, isOpen, onToggle }: TableProps) {
                             programRaw: r.programRaw,
                             scoreType: r.scoreType,
                             funding: r.funding,
-                            rank: r.byYear.get(BASE_YEAR)?.rank ?? null
+                            rank: r.byYear.get(BASE_YEAR)?.rank ?? null,
+                            kod: r.kod
                           })
                           if (!ok) alert(`Tercih listesi dolu (en fazla ${MAX_TERCIH} tercih).`)
                         }}
